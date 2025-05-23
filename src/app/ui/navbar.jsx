@@ -35,7 +35,7 @@ export default function NavBar() {
                     className='hover:text-black mx-2'
                     href='/leadership'
                 >
-                    Leadership
+                    Leadership and Volunteering
                 </Link>
             </div >
             <div className={pathname == '/work' ? 'w-1/8 bg-blue-200' : 'w-1/8 bg-blue-500'}>
