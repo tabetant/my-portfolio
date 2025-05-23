@@ -14,12 +14,12 @@ export default function NavBar() {
                     About
                 </Link>
             </div >
-            <div className={pathname == '/experience' ? 'w-1/8 bg-blue-200' : 'w-1/8 bg-blue-500'}>
+            <div className={pathname == '/education' ? 'w-1/8 bg-blue-200' : 'w-1/8 bg-blue-500'}>
                 <Link
                     className='hover:text-black mx-2'
-                    href='/experience'
+                    href='/education'
                 >
-                    Experience & Awards
+                    Education & Awards
                 </Link>
             </div >
             <div className={pathname == '/projects' ? 'w-1/8 bg-blue-200' : 'w-1/8 bg-blue-500'}>
@@ -28,6 +28,22 @@ export default function NavBar() {
                     href='/projects'
                 >
                     Projects
+                </Link>
+            </div >
+            <div className={pathname == '/leadership' ? 'w-1/8 bg-blue-200' : 'w-1/8 bg-blue-500'}>
+                <Link
+                    className='hover:text-black mx-2'
+                    href='/leadership'
+                >
+                    Leadership
+                </Link>
+            </div >
+            <div className={pathname == '/work' ? 'w-1/8 bg-blue-200' : 'w-1/8 bg-blue-500'}>
+                <Link
+                    className='hover:text-black mx-2'
+                    href='/work'
+                >
+                    Work
                 </Link>
             </div >
         </nav >
