@@ -67,7 +67,22 @@ export default function RootLayout({
         <div>
           <NavBar />
         </div>
-        {children}
+        <div className='container mx-auto px-4'>
+          {children}
+        </div>
+        <footer className='text-black text-center mt-5'>
+          <h2>Socials:</h2>
+          <ul>
+            <li>
+              <Link href="https://www.instagram.com/antoun8?igsh=Y3Jzc3IwZXlwbzZz&utm_source=qr"
+                target="_blank">Instagram <i className="fab fa-instagram"></i></Link>
+            </li>
+            <li>
+              <Link href="https://snapchat.com/t/o8C7U8Uy" target="_blank">Snapchat <i
+                className="fab fa-snapchat"></i></Link>
+            </li>
+          </ul>
+        </footer>
       </body>
     </html >
   );
