@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from 'next/link'
+import NavBar from './ui/navbar'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +31,7 @@ export default function RootLayout({
         <title>AT Resumé</title>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
         <header className='flex flex-col bg-white text-black items-center leading-none'>
           <div className="italic text-3xl">
@@ -63,7 +64,9 @@ export default function RootLayout({
             </div>
           </div>
         </header>
-        <nav></nav>
+        <div>
+          <NavBar />
+        </div>
         {children}
       </body>
     </html >
