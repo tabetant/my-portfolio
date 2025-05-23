@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from 'next/navigation'
+import Link from 'next/link'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,12 +25,47 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></link>
+        <title>AT Resumé</title>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header className='flex flex-col bg-white text-black items-center leading-none'>
+          <div className="italic text-3xl">
+            <h1>Antoine Tabet </h1>
+          </div>
+          <div className="flex flex-row text-xl">
+            <div className="flex items-center mx-2">
+              <p>Toronto, Ontario, Canada <i className="fas fa-map-marker-alt"></i>
+              </p>
+            </div>
+            <div className="flex items-center mx-2">
+              <p><Link className='hover:text-violet-600' href="tel:+14162540034">+1 (416) 254-0034 <i className="fas fa-phone"></i>
+              </Link></p>
+            </div>
+            <div className="flex items-center mx-2">
+              <p><Link className='hover:text-violet-600' href="mailto:antoine.tabet@mail.utoronto.ca">antoine.tabet@mail.utoronto.ca <i
+                className="fas fa-envelope"></i>
+              </Link></p>
+            </div>
+            <div className="flex items-center mx-2">
+              <p>
+                <Link className='hover:text-violet-600' href="https://www.linkedin.com/in/antoinetabetuoft/" target="_blank">LinkedIn <i
+                  className="fab fa-linkedin"></i></Link>
+              </p>
+            </div>
+            <div className="flex items-center mx-2">
+              <p><Link className='hover:text-violet-600' href="https://github.com/tabetant" target="_blank">GitHub <i className="fab fa-github"></i>
+              </Link>
+              </p>
+            </div>
+          </div>
+        </header>
+        <nav></nav>
         {children}
-
       </body>
-    </html>
+    </html >
   );
 }
