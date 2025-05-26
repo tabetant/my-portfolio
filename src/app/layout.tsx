@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from 'next/link'
 import NavBar from './ui/navbar'
+import { exile } from '@/app/ui/fonts';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +35,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
         <header className='my-5 flex flex-col bg-white text-black items-center leading-none'>
-          <div className="italic text-5xl font-bold">
+          <div className={`${exile.className} text-5xl font-bold`}>
             <h1>Antoine Tabet </h1>
           </div>
           <div className="flex flex-row text-xl">

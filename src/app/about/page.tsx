@@ -1,13 +1,14 @@
 import Image from 'next/image'
+import { exile } from '@/app/ui/fonts';
 
 export default function AboutPage() {
     return (
         <div className='flex flex-col text-black items-center'>
             <div className='flex flex-row '>
-                <div className='flex flex-col justify-between'>
+                <div className='flex flex-col justify-start md:w-1/2'>
                     <div>
                         <h1
-                            className='text-black text-center text-5xl italic mx-5'
+                            className={`${exile.className} text-black text-center text-5xl mx-5`}
                         >About Me
                         </h1>
                         <hr />
@@ -21,7 +22,7 @@ export default function AboutPage() {
                         </p>
                     </div>
                     <div className="my-5">
-                        <h2 className='text-black text-center text-5xl italic mx-5'>Skills</h2>
+                        <h2 className={` ${exile.className} text-black text-center text-5xl mx-5`}>Skills</h2>
                         <hr />
                         <ul className='text-xl mx-5 '>
                             <li><strong>Programming:</strong> Python, C, C++, Arduino</li>
@@ -33,17 +34,19 @@ export default function AboutPage() {
                         </ul>
                     </div>
                 </div>
-                <Image className='rounded-xl mx-5' width={500} height={300} src='/images/pianoedited.jpg' alt='piano' />
+                <div className='relative aspect-[4/3] w-full md:w-[60%] h-auto rounded-xl overflow-hidden'>
+                    <Image fill className='object-cover' src='/images/pianoedited.jpg' alt='piano' />
+                </div>
             </div>
-            <div className='flex flex-row my-5'>
+            <div className='flex flex-row my-5 justify-start w-full'>
                 <div className='mx-5'>
                     <h2 className='text-5xl'>Languages</h2>
-                    <div>
-                        <ul className='text-2xl'>
-                            <li>English</li>
-                            <li>French</li>
-                            <li>Arabic</li>
-                            <li>Spanish</li>
+                    <div className='text-center my-5'>
+                        <ul className='text-3xl'>
+                            <li className='bg-red-500'>🇨🇦 English</li>
+                            <li className='bg-blue-500'>🇫🇷 French</li>
+                            <li className='bg-green-500'>🇱🇧 Arabic</li>
+                            <li className='bg-yellow-500'>🇪🇸 Spanish</li>
                         </ul>
                     </div>
                 </div>
