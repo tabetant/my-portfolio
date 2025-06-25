@@ -1,192 +1,116 @@
-import Link from 'next/link'
+'use client';
+import { Card } from '../ui/Card';
+import Link from 'next/link';
+import { exile } from '@/app/ui/fonts';
 
 export default function ProjectsPage() {
     return (
-        <div className='text-black flex flex-col justify-center'>
-            <div>
-                <h1>
-                    <strong>
-                        Food and Community Courtyard Initiative (APS111 course)
-                    </strong>,
-                    <em>Team Leader
-                        <div>
-                            September
-                            2024
-                            - December 2025
-                        </div>
-                    </em>
-                </h1>
-                <ul>
-                    <li>
-                        Led and facilitated structured team meetings, setting clear agendas and task assignments
-                        to
-                        ensure
-                        efficiency
-                    </li>
-                    <li>
-                        Applied problem-solving and team-building skills to navigate project challenges and
-                        drive
-                        successful
-                        outcomes
-                    </li>
-                    <li>
-                        Researched and implemented innovative design solutions to optimize community engagement
-                        and
-                        sustainability
-                    </li>
-                    <li>
-                        Documented the project in IEEE format using Google Docs and Sheets, enhancing
-                        professional
-                        technical
-                        writing skills
-                    </li>
-                </ul>
-            </div>
-            <div className='mt-5'>
-                <h4>
-                    <strong>
-                        Bookend Design for Oversized Books (APS112 Course)
-                    </strong>,
-                    <em>Team Leader
-                        <div>January 2025 -
-                            April
-                            2025</div>
-                    </em>
-                </h4>
-                <ul>
-                    <li>
-                        Led a 6-member engineering team in developing a physical support system for 200-year-old
-                        parish
-                        registers stored in archival shelves, addressing client needs for preservation and
-                        accessibility
-                    </li>
-                    <li>
-                        Spearheaded the engineering design process including problem definition, stakeholder
-                        analysis,
-                        functional decomposition, objective ranking (pairwise comparison), constraint
-                        specification,
-                        and
-                        environmental analysis
-                    </li>
-                    <li>
-                        Facilitated idea generation using morphological charts, SCAMPER, and benchmarking to
-                        generate 61
-                        full solutions, followed by feasibility screening, multivoting, and selection tools
-                        including a
-                        graphical decision matrix and the Pugh method.
-                    </li>
-                    <li>
-                        Managed team communication, client meetings, and technical documentation, ensuring
-                        compliance
-                        with
-                        University of Toronto engineering standards and archival preservation policies.
-                    </li>
-                </ul>
-            </div>
-            <div className='mt-5'>
-                <h4>
-                    <strong>
-                        Remi - GenAI Genesis Hackathon
-                    </strong>,
-                    <em>Full Stack Developer
-                        <div>
-                            March 2025
-                        </div>
-                    </em>
-                </h4>
-                <ul>
-                    <li>Designed and built an AI-powered memory companion using Python (backend) and JavaScript
-                        (frontend)
-                        to support individuals with Alzheimer’s through personalized conversation and memory
-                        games
-                    </li>
-                    <li>Integrated Gemini API for context-aware dialogue, Whisper for real-time speech-to-text,
-                        and
-                        ElevenLabs for human-like voice synthesis</li>
-                    <li>Developed an adaptive memory game that adjusts difficulty based on user performance and
-                        tracks
-                        cognitive progress
-                    </li>
-                    <li>Created a doctor-facing dashboard (Figma prototype) to visualize patient engagement and
-                        cognitive
-                        trends over time</li>
-                    <li>Prioritized accessibility and emotional design, focusing on a calm and intuitive
-                        interface
-                        for
-                        users
-                        with cognitive impairments
-                    </li>
-                    <li>
-                        <Link
-                            href="https://devpost.com/software/remi-a-friend-that-remembers"
-                            target="_blank">
-                            Check Remi Out
-                        </Link>
-                    </li>
-                </ul>
-            </div>
-            <div className='mt-5'>
-                <h4>
-                    <strong>
-                        VoltsWagon - MakeUofT Hackathon
-                    </strong>,
-                    <em>Participant
-                        <div>
-                            March 2025
-                        </div>
-                    </em>
-                </h4>
-                <ul>
-                    <li>Designed and prototyped a remote-controlled trash collecting vehicle using Arduino Uno,
-                        Python
-                        (pygame), and C++
-                    </li>
-                    <li>
-                        Engineered a servo-driven clamp and integrated stepper motors, enabling precise object
-                        collection
-                        and release
-                    </li>
-                    <li>Overcame hardware challenges, including motor optimizations and circuit failures, to
-                        build a
-                        functional prototype in 24 hours</li>
-                    <li>Strengthened expertise in embedded systems, Bluetooth communication, and
-                        hardware-software
-                        integration</li>
-                    <li><a href="https://devpost.com/software/voltswagon" target="_blank">Check VoltsWagon
-                        Out</a>
-                    </li>
-                </ul>
-            </div>
-            <div className='mt-5'>
-                <h4><strong>
-                    Ace the Case - Deloitte & UTESCA Case Competition
-                </strong>,
-                    <em>Participant
-                        <div>
-                            March 2025
-                        </div>
-                    </em>
-                </h4>
-                <ul>
-                    <li>
-                        Conducted a strategic analysis on project management software solutions for a $3B smart
-                        home manufacturing facility
-                    </li>
-                    <li>
-                        Developed a data-driven recommendation using SWOT analysis, cost-benefit evaluation, and
-                        stakeholder impact assessment
-                    </li>
-                    <li>
-                        Presented findings to Deloitte professionals, demonstrating problem-solving,
-                        communication, and analytical skills under time pressure.
-                    </li>
-                    <li>
-                        Collaborated with a team to synthesize complex data into a compelling and structured
-                        pitch
-                    </li>
-                </ul>
-            </div>
-        </div >
+        <div className="bg-white text-black px-6 md:px-10 py-16 max-w-screen-lg mx-auto space-y-12">
+            {/* Section Heading */}
+            <h1 className={`${exile.className} text-5xl font-bold text-center`}>Projects & Experiences</h1>
+            <hr className="w-20 h-0.5 mx-auto border-0 bg-gray-300" />
 
-    )
+            {/* Project List */}
+            <div className="space-y-8">
+                {/* Single Project Card (repeat) */}
+                <Card className="p-6 bg-gray-50 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                    <div className="flex flex-col md:flex-row justify-between items-start mb-3">
+                        <h2 className="text-2xl font-semibold">Customer Support Ticket System</h2>
+                        <span className="text-sm italic text-gray-500">Full Stack Developer — May 2025 – June 2025</span>
+                    </div>
+                    <ul className="list-disc pl-5 text-gray-700 text-lg leading-relaxed space-y-2">
+                        <li>Built a ticketing app with draggable status-based columns and email notifications.</li>
+                        <li>Implemented file uploads, Zod validation, Supabase storage, and react-email.</li>
+                        <li>Practiced client-side rendering and secure Supabase CRUD using Drizzle ORM.</li>
+                        <li><Link className='hover:text-blue-500' href='https://github.com/tabetant/cs-ticket-system'>Check out the CS Ticket System</Link></li>
+                    </ul>
+                </Card>
+
+                <Card className="p-6 bg-gray-50 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                    <div className="flex flex-col md:flex-row justify-between items-start mb-3">
+                        <h2 className="text-2xl font-semibold">Job Application Tracker</h2>
+                        <span className="text-sm italic text-gray-500">Full Stack Developer — May 2025 – June 2025</span>
+                    </div>
+                    <ul className="list-disc pl-5 text-gray-700 text-lg leading-relaxed space-y-2">
+                        <li>Tracked job applications with file uploads, inline editing, and Zod-based filtering.</li>
+                        <li>Used Supabase and Drizzle to persist and retrieve user state in real time.</li>
+                        <li><Link className='hover:text-blue-500' href='https://github.com/tabetant/job_app_manager'>Check out the Job App Tracker</Link></li>
+                    </ul>
+                </Card>
+
+                <Card className="p-6 bg-gray-50 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                    <div className="flex flex-col md:flex-row justify-between items-start mb-3">
+                        <h2 className="text-2xl font-semibold">Task Manager</h2>
+                        <span className="text-sm italic text-gray-500">Full Stack Developer — May 2025 – June 2025</span>
+                    </div>
+                    <ul className="list-disc pl-5 text-gray-700 text-lg leading-relaxed space-y-2">
+                        <li>Practiced CRUD fundamentals and Drizzle-based data persistence using tasks and checkboxes.</li>
+                        <li>Built from scratch with minimal layout and used server actions for task completion toggles.</li>
+                        <li><Link href='https://github.com/tabetant/task_manager' className='hover:text-blue-50'>Check out the Task Manager</Link></li>
+                    </ul>
+                </Card>
+
+                <Card className="p-6 bg-gray-50 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                    <div className="flex flex-col md:flex-row justify-between items-start mb-3">
+                        <h2 className="text-2xl font-semibold">Food & Community Courtyard Initiative</h2>
+                        <span className="text-sm italic text-gray-500">Team Leader — Sept 2024 – Dec 2025</span>
+                    </div>
+                    <ul className="list-disc pl-5 text-gray-700 text-lg leading-relaxed space-y-2">
+                        <li>Led a team to design a courtyard space combining sustainability, culture, and food access.</li>
+                        <li>Applied structured teamwork and professional documentation using IEEE formatting.</li>
+                    </ul>
+                </Card>
+
+                <Card className="p-6 bg-gray-50 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition mt-5">
+                    <div className="flex flex-col md:flex-row justify-between items-start mb-3">
+                        <h2 className="text-2xl font-semibold">Bookend Design for Oversized Books (APS112)</h2>
+                        <span className="text-sm italic text-gray-500">Team Leader — Jan 2025 – Apr 2025</span>
+                    </div>
+                    <ul className="list-disc pl-5 text-gray-700 text-lg leading-relaxed space-y-2">
+                        <li>Led a 6-member team to design a support system for 200-year-old parish registers in archival storage.</li>
+                        <li>Oversaw the engineering process from stakeholder analysis to feasibility screening and solution selection.</li>
+                        <li>Managed client communication, technical documentation, and adherence to archival preservation standards.</li>
+                    </ul>
+                </Card>
+
+                <Card className="p-6 bg-gray-50 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                    <div className="flex flex-col md:flex-row justify-between items-start mb-3">
+                        <h2 className="text-2xl font-semibold">Remi – GenAI Genesis Hackathon</h2>
+                        <span className="text-sm italic text-gray-500">Full Stack Developer — March 2025</span>
+                    </div>
+                    <ul className="list-disc pl-5 text-gray-700 text-lg leading-relaxed space-y-2">
+                        <li>Developed a memory aid tool for Alzheimer's patients using Gemini AI and ElevenLabs.</li>
+                        <li>Used Whisper for real-time speech, and Figma for a caregiver dashboard prototype.</li>
+                        <li>
+                            <Link href="https://devpost.com/software/remi-a-friend-that-remembers" target="_blank" className="hover:text-blue-600">
+                                Check Remi Out
+                            </Link>
+                        </li>
+                    </ul>
+                </Card>
+
+
+                <Card className="p-6 bg-gray-50 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+                    <div className="flex flex-col md:flex-row justify-between items-start mb-3">
+                        <h2 className="text-2xl font-semibold">VoltsWagon – MakeUofT Hackathon</h2>
+                        <span className="text-sm italic text-gray-500">Participant — February 2025</span>
+                    </div>
+                    <ul className="list-disc pl-5 text-gray-700 text-lg leading-relaxed space-y-2">
+                        <li>Designed and built a Bluetooth-controlled trash-collecting vehicle using Arduino Uno, C++, and Python (pygame).</li>
+                        <li>Implemented servo-driven clamps and stepper motors for accurate object handling.</li>
+                        <li>Resolved hardware failures under time pressure, delivering a working prototype in under 24 hours.</li>
+                        <li>
+                            <Link href="https://devpost.com/software/voltswagon" target="_blank" className="hover:text-blue-600">
+                                Check VoltsWagon Out
+                            </Link>
+                        </li>
+                    </ul>
+                </Card>
+
+
+
+
+            </div>
+        </div>
+    );
 }
