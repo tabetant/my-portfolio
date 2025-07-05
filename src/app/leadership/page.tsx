@@ -1,86 +1,90 @@
+'use client';
+import { Card } from '../ui/Card';
+import { exile } from '@/app/ui/fonts';
+
 export default function EduPage() {
     return (
-        <div className='text-black'>
-            <h1 className='text-center'>My Leadership Experiences</h1>
-            <div id="Leadership">
-                <h2>Academic & Leadership Experiences</h2>
-                <div id="HMUN23">
-                    <h4>Harvard Model United Nations, <em>Delegate<div>May 2022 - January 2023</div></em></h4>
-                    <ul>
-                        <li>Represented Denmark in the Special Political and Decolonization Committee at Harvard
-                            Model United Nations 2023.</li>
-                        <li>Delivered speeches to an audience of 300+ delegates, earning a “Diplomatic Commendation”
-                            for exemplary diplomacy and negotiation.</li>
-                        <li>Trained for over 6 months, mastering policy research, speech writing, public speaking,
-                            and UN procedural rules (e.g., resolutions, position papers).</li>
-                        <li>Collaborated with international peers to draft and negotiate impactful resolutions on
-                            global issues.</li>
+        <div className='bg-white text-black px-6 md:px-10 py-16 max-w-screen-lg mx-auto space-y-12'>
+            <h1 className={`${exile.className} text-5xl font-bold text-center`}>Leadership & Volunteering</h1>
+            <hr className='w-20 h-0.5 mx-auto border-0 bg-gray-300' />
+
+            {/* Leadership Section */}
+            <div className='space-y-8'>
+                <h2 className='text-3xl font-semibold text-center'>Academic & Leadership Experiences</h2>
+
+                <Card className='p-6 bg-gray-50 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition'>
+                    <div className='flex flex-col md:flex-row justify-between items-start mb-3'>
+                        <h2 className='text-2xl font-semibold'>Harvard Model United Nations</h2>
+                        <span className='text-sm italic text-gray-500'>Delegate — May 2022 – Jan 2023</span>
+                    </div>
+                    <ul className='list-disc pl-5 text-gray-700 text-lg leading-relaxed space-y-2'>
+                        <li>Represented Denmark in the Special Political and Decolonization Committee.</li>
+                        <li>Earned a “Diplomatic Commendation” for diplomacy and negotiation.</li>
+                        <li>Trained in research, speechwriting, and UN procedures.</li>
                     </ul>
-                </div>
+                </Card>
+
+                <Card className='p-6 bg-gray-50 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition'>
+                    <div className='flex flex-col md:flex-row justify-between items-start mb-3'>
+                        <h2 className='text-2xl font-semibold'>Loudoun International Youth Leadership Summit</h2>
+                        <span className='text-sm italic text-gray-500'>Student — March 2023</span>
+                    </div>
+                    <ul className='list-disc pl-5 text-gray-700 text-lg leading-relaxed space-y-2'>
+                        <li>Recognized as an “Outstanding Delegate” among global peers.</li>
+                        <li>Attended talks with prominent leaders and changemakers.</li>
+                    </ul>
+                </Card>
+
+                <Card className='p-6 bg-gray-50 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition'>
+                    <div className='flex flex-col md:flex-row justify-between items-start mb-3'>
+                        <h2 className='text-2xl font-semibold'>John C. Maxwell Leadership Program</h2>
+                        <span className='text-sm italic text-gray-500'>Student — Dec 2021 – May 2022</span>
+                    </div>
+                    <ul className='list-disc pl-5 text-gray-700 text-lg leading-relaxed space-y-2'>
+                        <li>Completed courses in life skills, leadership, and public speaking.</li>
+                        <li>Practiced negotiation, teamwork, and emotional intelligence.</li>
+                    </ul>
+                </Card>
             </div>
-            <div id="LIYLS">
-                <h4>Loudon International Youth Leader, <em>Student<div>March 2023</div></em>
-                </h4>
-                <ul>
-                    <li>Participated in LIYLS, a high-school students’ forum to address the most pressing challenges
-                        facing the global community.</li>
-                    <li>Awarded “Outstanding Delegate Award”, recognizing performance and leadership during the
-                        conferences.
-                    </li>
-                    <li>Attended seminars with key figures such as activist Sophia Kanni and Ukraine’s ex-Minister
-                        of Ed and Sci Ana Novosad.
-                    </li>
-                </ul>
-            </div>
-            <div id="JohnC">
-                <h4>John C. Maxwell Leadership, <em>Student<div>December 2021 - May 2022</div></em></h4>
-                <ul>
-                    <li>Courses: “Basic Life Skills” and “Advanced Life Skills”</li>
-                    <li>Trained by a John C. Maxwell-certified trainer and speaker on the fundamentals of advanced
-                        leadership, public speaking, decision making, creative problem-solving, emotional
-                        intelligence, conflict resolution, decision-making, and teamwork.</li>
-                    <li>Strengthened my public speaking skills by practicing speech writing, verbal, and non-verbal
-                        communication.
-                    </li>
-                    <li>Engaged with classmates in debate topics to develop negotiation skills while putting to
-                        practice the principles of teamwork. </li>
-                </ul>
-            </div>
-            <h1 className='text-center'>My Volunteering Experiences</h1>
-            <div id="Scouts">
-                <h4>Les Scouts du Liban, <em>Boy Scout<div>September 2016 - Present</div></em></h4>
-                <ul>
-                    <li>Served as an elected leader in a troop of 9 scouts (events planning, lead meetings and
-                        trained the younger scout boys on technical skills (e.g., tying knots, cooking, how to
-                        light up a fire in a camp setting, health & safety awareness, etc.)).</li>
-                    <li>Performed 80+ hours of community service through fundraising events such as a yearly
-                        food bank to provide help and support for underserved communities, beach clean-ups, and
-                        fun educational activities for kids in remote areas.
-                    </li>
-                    <li>Participated in weeks-long camping in remote forests (developed sense of responsibility,
-                        teamwork, and resourcefulness).</li>
-                    <li>Learned the fundamentals of leadership, responsibility, patience, and accountability.
-                    </li>
-                </ul>
-            </div>
-            <div id="ODM">
-                <h4>Order of Malta, <em>Volunteer<div>July 2023</div></em></h4>
-                <ul>
-                    <li>Participated in a week-long camp at a village in Lebanon and was assigned the entirety
-                        care of a disabled person.</li>
-                    <li>Learned the virtues of patience, communication and responsibility. </li>
-                </ul>
-            </div>
-            <div id="safespace">
-                <h4>Safe Space Drop In, <em>Volunteer <div>November 2024 - Present</div></em></h4>
-                <ul>
-                    <li>Once a month, participate in the safe space drop in at the St Stephen church.</li>
-                    <li>Aid in offering breakfast/dinner to the people who drop-in on weekend mornings/evenings.
-                    </li>
-                    <li>Learn to communicate and form friendships and bonds with both volunteers and drop-ins.
-                    </li>
-                </ul>
+
+            {/* Volunteering Section */}
+            <div className='space-y-8'>
+                <h2 className='text-3xl font-semibold text-center'>Volunteering Experiences</h2>
+
+                <Card className='p-6 bg-gray-50 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition'>
+                    <div className='flex flex-col md:flex-row justify-between items-start mb-3'>
+                        <h2 className='text-2xl font-semibold'>Les Scouts du Liban</h2>
+                        <span className='text-sm italic text-gray-500'>Boy Scout — Sept 2016 – Present</span>
+                    </div>
+                    <ul className='list-disc pl-5 text-gray-700 text-lg leading-relaxed space-y-2'>
+                        <li>Led a troop of scouts, organized events, and taught outdoor survival skills.</li>
+                        <li>Completed 80+ hours of service through fundraising and community cleanups.</li>
+                        <li>Gained resilience, teamwork, and leadership in remote camping settings.</li>
+                    </ul>
+                </Card>
+
+                <Card className='p-6 bg-gray-50 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition'>
+                    <div className='flex flex-col md:flex-row justify-between items-start mb-3'>
+                        <h2 className='text-2xl font-semibold'>Order of Malta</h2>
+                        <span className='text-sm italic text-gray-500'>Volunteer — July 2023</span>
+                    </div>
+                    <ul className='list-disc pl-5 text-gray-700 text-lg leading-relaxed space-y-2'>
+                        <li>Provided full-time care to a disabled person during a week-long village camp.</li>
+                        <li>Strengthened empathy, patience, and communication through hands-on service.</li>
+                    </ul>
+                </Card>
+
+                <Card className='p-6 bg-gray-50 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition'>
+                    <div className='flex flex-col md:flex-row justify-between items-start mb-3'>
+                        <h2 className='text-2xl font-semibold'>Safe Space Drop-In</h2>
+                        <span className='text-sm italic text-gray-500'>Volunteer — Nov 2024 – Present</span>
+                    </div>
+                    <ul className='list-disc pl-5 text-gray-700 text-lg leading-relaxed space-y-2'>
+                        <li>Serve meals to community members at monthly drop-in events.</li>
+                        <li>Foster meaningful conversations with volunteers and visitors alike.</li>
+                    </ul>
+                </Card>
             </div>
         </div>
-    )
+    );
 }
