@@ -10,6 +10,9 @@
 
 ## [Plan]
 - **Hero**: Typewriter effect, dark/tech vibe.
+  - Implemented `Hero.tsx` using `framer-motion` for entrance animations and typewriter text.
+  - Using random delays and cursors for "Engineering" feel.
+  - Linked Resume and Socials.
 - **Timeline**: Vertical terminal-style journey.
 - **Neural Audit**: Interactive visual component for N3XU$.
 - **Poetry**: Trilingual toggle with distinct serif typography.
