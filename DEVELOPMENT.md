@@ -18,4 +18,9 @@
   - Added "Terminal" header and Lucide icons for each milestone.
   - Used Framer Motion for scroll-triggered animations.
 - **Neural Audit**: Interactive visual component for N3XU$.
-- **Poetry**: Trilingual toggle with distinct serif typography.
+  - Implemented `NeuralAudit.tsx` with a split-screen design (File Input vs. Terminal Output).
+  - Added simulated processing states (Scanning -> Extracting -> JSON).
+  - Used specific colors (Violet/Emerald) to represent the AI process.
+- **Projects**: Grid layout for featured works.
+  - Implemented `Projects.tsx` with hover effects and tag pills.
+  - Featured N3XU$, Click-A-Mole, and SentinelStream.

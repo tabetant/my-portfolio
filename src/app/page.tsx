@@ -1,6 +1,7 @@
 import About from "@/components/sections/About";
 import Hero from "@/components/sections/Hero";
 import NeuralAudit from "@/components/sections/NeuralAudit";
+import Poetry from "@/components/sections/Poetry";
 import Projects from "@/components/sections/Projects";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <About />
       <NeuralAudit />
       <Projects />
+      <Poetry />
     </div>
   );
 }
