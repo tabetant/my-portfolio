@@ -11,7 +11,7 @@ const projects = [
         description: "A decentralized identity protocol leveraging AI for document auditing and verification. Features the 'Neural Audit' system demonstrated above.",
         tags: ["Next.js", "Solidity", "Python", "NLP"],
         github: "https://github.com/tabetant",
-        demo: "#neural-audit",
+        demo: null,
         color: "border-violet-500/50 hover:border-violet-500",
     },
     {
