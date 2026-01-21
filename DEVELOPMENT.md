@@ -5,6 +5,13 @@
 - **Dependencies**: Added `framer-motion` for animations, `lucide-react` for icons, `clsx` + `tailwind-merge` for class utility.
 - **Design System**:
   - **Colors**: Defined 'Engineering' palette (Slate background, Emerald/Violet/Amber accents).
+  - **Contact**: Footer/Contact section.
+  - Implemented `Contact.tsx`.
+  - Added interaction links and "Scroll to Top".
+  - **Assets**: Moved latest resume to `public/` for accessibility.
+- **Content Refresh**:
+  - Updated Poetry Section with authentic poems from 'Heartstrings Unplayed' manuscript (English, French, Spanish).
+  - Replaced "Portfolio V1" with "Aspire Web Suite" to highlight recent professional work.
   - **Fonts**: Inter (Sans), JetBrains Mono (Mono), Playfair Display (Serif/Poetry).
   - **Structure**: Moving towards a Single Page Application (SPA) with smooth scrolling sections.
 

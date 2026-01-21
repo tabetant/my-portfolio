@@ -50,7 +50,7 @@ export default function Hero() {
                     </div>
 
                     <p className="mx-auto mt-8 max-w-2xl text-lg text-slate-400 sm:text-xl">
-                        CompEng Student @ UofT. Dean's List Scholar (3.83 GPA). <br />
+                        CompEng Student @ UofT. Dean&apos;s List Scholar (3.83 GPA). <br />
                         Structuring the unstructured with <span className="text-emerald-400">AI</span> & <span className="text-violet-400">Engineering</span>.
                     </p>
 

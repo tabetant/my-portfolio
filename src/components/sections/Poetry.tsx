@@ -9,40 +9,37 @@ type Language = "EN" | "FR" | "ES";
 
 const poems = {
     EN: {
-        title: "Static Noise",
-        content: `We are but signals
-Lost in the interference of modern love.
-I texted you a galaxy,
-And you replied with a thumbs up.
-
-In the silence between notifications,
-I wonder if our frequencies
-Will ever align again.`,
-        theme: "Infatuation & Disconnect",
+        title: "Romeo & Juliet",
+        content: `I was Romeo, you were Juliet
+A modern Shakespearean duet
+I once hoped we wouldn’t die at the end
+But I think I would have been better off dead
+Rather than knowing all I know now,
+The dreams that wake me with a frown
+Sweating from anxiety and dread…
+I wish we’d both died at the end.`,
+        theme: "Modern Tragedy",
     },
     FR: {
-        title: "L'Écho de la Mémoire",
-        content: `Dans les ruelles de mon esprit,
-Ton ombre danse encore sous les réverbères.
-Nous étions infinis,
-Avant de devenir des étrangers familiarisés.
-
-Le temps n'efface pas les traces,
-Il ne fait que les recouvrir de poussière,
-Attendant le vent du souvenir.`,
+        title: "Depuis, Avec, Après",
+        content: `Ma vie après toi est un blasphème.
+J'ai trouvé l’Eden 
+Dans tes bras,
+Pour toujours mon coeur t’appartiendra.
+A jamais cherchera-t-il une autre
+Qui ne lui poignardera pas la côte,
+Sera tous ce que tu n’a pas pu être,
+Mettra fin à mon mal-être...`,
         theme: "Memory & Loss",
     },
     ES: {
-        title: "Sobreviviendo al Silencio",
-        content: `El amor no siempre es un incendio;
-A veces es la brasa que se niega a morir.
-Caminamos sobre las cenizas
-De lo que prometimos ser.
-
-Pero aquí estamos,
-Respirando el humo,
-Decidiendo si avivar el fuego
-O dejarlo extinguir.`,
+        title: "Muerte de la Pluma",
+        content: `No escribo desde que apagué mis emociones.
+Ahora ya no siento, ni siquiera en ocasiones.
+Quizás sea mejor así, porque cuando lo dejamos,
+De sentimientos de soledad, padecí océanos.
+No escribo desde hace un mes, más o menos
+Porque ya no soy capaz de recordar los besos.`,
         theme: "Survival & Resilience",
     },
 };
@@ -71,7 +68,8 @@ export default function Poetry() {
                         Heartstrings Unplayed
                     </h2>
                     <p className="font-serif italic text-xl text-rose-200/60 max-w-2xl mx-auto">
-                        "For all hopeless romantics whose heartstrings remain unplayed."
+                        &quot;For all hopeless romantics whose heartstrings remain unplayed. <br />
+                        A tous les romantiques sans espoir dont les cordes du coeur demeurent sans musicien.&quot;
                     </p>
                 </div>
 

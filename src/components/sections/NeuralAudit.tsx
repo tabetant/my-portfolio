@@ -1,9 +1,8 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { FileText, Cpu, CheckCircle, Loader2, ArrowRight } from "lucide-react";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
 
 const mockJsonOutput = `{
   "course_code": "ECE297",
@@ -157,7 +156,7 @@ export default function NeuralAudit() {
                                         animate={{ opacity: 1 }}
                                         className="text-emerald-300"
                                     >
-                                        <div className="text-slate-500 mb-2">// Extraction Complete (0.4s)</div>
+                                        <div className="text-slate-500 mb-2">{'// Extraction Complete (0.4s)'}</div>
                                         <pre className="whitespace-pre-wrap">{mockJsonOutput}</pre>
                                     </motion.div>
                                 )}
