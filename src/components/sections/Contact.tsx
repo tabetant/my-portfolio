@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Github, Linkedin, ArrowUp } from "lucide-react";
+import { Mail, Github, Linkedin, ArrowUp, Instagram } from "lucide-react";
 import Link from "next/link";
 
 export default function Contact() {
@@ -32,16 +32,19 @@ export default function Contact() {
                 <div className="border-t border-slate-900 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
                     {/* Socials */}
                     <div className="flex gap-6 text-slate-500">
-                        <Link href="https://github.com/tabetant" target="_blank" className="hover:text-emerald-400 transition-colors">
+                        <Link href="https://github.com/tabetant/my-portfolio" target="_blank" className="hover:text-emerald-400 transition-colors">
                             <Github className="h-5 w-5" />
                         </Link>
                         <Link href="https://www.linkedin.com/in/antoinetabetuoft/" target="_blank" className="hover:text-violet-400 transition-colors">
                             <Linkedin className="h-5 w-5" />
                         </Link>
+                        <Link href="https://www.instagram.com/antoun8/" target="_blank" className="hover:text-rose-400 transition-colors">
+                            <Instagram className="h-5 w-5" />
+                        </Link>
                     </div>
 
                     <div className="text-slate-600 text-sm">
-                        © {new Date().getFullYear()} Antoine Tabet. Built with Next.js & Tailwind.
+                        © 2026 Antoine Tabet. Built with Next.js & Tailwind.
                     </div>
 
                     <button

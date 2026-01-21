@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Terminal, ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { Terminal, ArrowRight, Github, Linkedin, Mail, Instagram } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -72,7 +72,7 @@ export default function Hero() {
 
                     {/* Socials */}
                     <div className="mt-12 flex justify-center gap-6 text-slate-500">
-                        <Link href="https://github.com/tabetant" target="_blank" className="hover:text-emerald-400 transition-colors">
+                        <Link href="https://github.com/tabetant/my-portfolio" target="_blank" className="hover:text-emerald-400 transition-colors">
                             <Github className="h-6 w-6" />
                         </Link>
                         <Link href="https://www.linkedin.com/in/antoinetabetuoft/" target="_blank" className="hover:text-emerald-400 transition-colors">
@@ -80,6 +80,9 @@ export default function Hero() {
                         </Link>
                         <Link href="mailto:antoine.tabet@mail.utoronto.ca" className="hover:text-emerald-400 transition-colors">
                             <Mail className="h-6 w-6" />
+                        </Link>
+                        <Link href="https://www.instagram.com/antoun8/" target="_blank" className="hover:text-emerald-400 transition-colors">
+                            <Instagram className="h-6 w-6" />
                         </Link>
                     </div>
                 </motion.div>
