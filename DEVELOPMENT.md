@@ -14,5 +14,8 @@
   - Using random delays and cursors for "Engineering" feel.
   - Linked Resume and Socials.
 - **Timeline**: Vertical terminal-style journey.
+  - Implemented `About.tsx` with a responsive vertical timeline.
+  - Added "Terminal" header and Lucide icons for each milestone.
+  - Used Framer Motion for scroll-triggered animations.
 - **Neural Audit**: Interactive visual component for N3XU$.
 - **Poetry**: Trilingual toggle with distinct serif typography.
