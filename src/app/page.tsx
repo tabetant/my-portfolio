@@ -1,5 +1,8 @@
-export default function HomePage() {
+export default function Home() {
   return (
-    <h1 className='flex justify-center text-black'>Welcome to my Portfolio</h1>
-  )
+    <div className="flex flex-col items-center justify-center min-h-screen text-center p-8">
+      <h1 className="text-4xl font-bold font-mono text-emerald-400 mb-4">Antoine Tabet</h1>
+      <p className="text-xl text-slate-400">Initializing System...</p>
+    </div>
+  );
 }

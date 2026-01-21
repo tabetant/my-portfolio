@@ -26,7 +26,7 @@ export default function AboutPage() {
                             <h1 className={`${exile.className} text-5xl md:text-6xl font-semibold text-center mb-6`}>Skills</h1>
                             <hr className='w-1/5 mx-auto border-gray-300 mb-8' />
                             <ul className='space-y-3 text-lg leading-relaxed text-gray-700'>
-                                <li><strong>Programming:</strong> Python, C, C++, Arduino</li>
+                                <li><strong>Programming:</strong> Python, C, C++, Arduino, JavaScript, Next JS, TypeScript, Supabase, Drizzle ORM, Tailwind CSS, React </li>
                                 <li><strong>Hardware & Embedded Systems:</strong> Arduino Uno, Microcontrollers, Circuit Design
                                 </li>
                                 <li><strong>Software Tools:</strong> Microsoft Office Suite, Google Docs, Excel</li>

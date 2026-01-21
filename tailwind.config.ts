@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,8 +11,32 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        // Custom Palette
+        slate: {
+          900: "#0f172a",
+          950: "#020617",
+        },
+        emerald: {
+          400: "#34d399",
+          500: "#10b981",
+        },
+        violet: {
+          500: "#8b5cf6",
+        },
+        rose: {
+          400: "#fb7185",
+        },
+        amber: {
+          400: "#fbbf24",
+        },
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)", "sans-serif"],
+        mono: ["var(--font-jetbrains-mono)", "monospace"],
+        serif: ["var(--font-playfair-display)", "serif"],
       },
     },
   },
   plugins: [],
-} satisfies Config;
+};
+export default config;

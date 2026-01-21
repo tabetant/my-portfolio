@@ -2,8 +2,10 @@
 import { Card } from '../ui/Card';
 import Link from 'next/link';
 import { exile } from '@/app/ui/fonts';
-
+import { useState } from 'react';
 export default function ProjectsPage() {
+    const [projects, setProjects] = useState([]);
+
     return (
         <div className="bg-white text-black px-6 md:px-10 py-16 max-w-screen-lg mx-auto space-y-12">
             <h1 className={`${exile.className} text-5xl font-bold text-center`}>Projects & Experiences</h1>
@@ -59,8 +61,13 @@ export default function ProjectsPage() {
                         <li>Developed a memory aid tool for Alzheimer's patients using Gemini AI and ElevenLabs.</li>
                         <li>Used Whisper for real-time speech, and Figma for a caregiver dashboard prototype.</li>
                         <li>
-                            <Link href="https://devpost.com/software/remi-a-friend-that-remembers" target="_blank" className="hover:text-blue-600">
+                            <Link href='https://github.com/ryabalta/Remi' target="_blank" className="hover:text-blue-600">
                                 Check Remi Out
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="https://devpost.com/software/remi-a-friend-that-remembers" target="_blank" className="hover:text-blue-600">
+                                Watch us Demo Remi
                             </Link>
                         </li>
                     </ul>
@@ -74,8 +81,13 @@ export default function ProjectsPage() {
                         <li>Designed a Bluetooth-controlled trash-collecting car using Arduino, Python, and C++.</li>
                         <li>Integrated servo-driven clamps, stepper motors, and Bluetooth communication.</li>
                         <li>
+                            <Link href='https://github.com/oHqrizon/MakeUofT' target='_blank' className='hover:text-blue-600'>
+                                Check VoltsWagon out
+                            </Link>
+                        </li>
+                        <li>
                             <Link href="https://devpost.com/software/voltswagon" target="_blank" className="hover:text-blue-600">
-                                Check VoltsWagon Out
+                                Watch us Demo VoltsWagon
                             </Link>
                         </li>
                     </ul>
