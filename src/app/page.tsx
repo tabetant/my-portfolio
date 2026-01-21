@@ -1,4 +1,5 @@
 import About from "@/components/sections/About";
+import Contact from "@/components/sections/Contact";
 import Hero from "@/components/sections/Hero";
 import NeuralAudit from "@/components/sections/NeuralAudit";
 import Poetry from "@/components/sections/Poetry";
@@ -12,6 +13,7 @@ export default function Home() {
       <NeuralAudit />
       <Projects />
       <Poetry />
+      <Contact />
     </div>
   );
 }

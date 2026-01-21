@@ -13,6 +13,10 @@
   - Implemented `Hero.tsx` using `framer-motion` for entrance animations and typewriter text.
   - Using random delays and cursors for "Engineering" feel.
   - Linked Resume and Socials.
+- **Poetry**: Trilingual toggle.
+  - Implemented `Poetry.tsx` with a serif font (`Playfair Display`) and distinct rose-tinted aesthetic.
+  - Used State for language switching (English/French/Spanish) with AnimatePresence transitions.
+  - Added background noise/blur effects for a "dreamy" atmosphere.
 - **Timeline**: Vertical terminal-style journey.
   - Implemented `About.tsx` with a responsive vertical timeline.
   - Added "Terminal" header and Lucide icons for each milestone.
