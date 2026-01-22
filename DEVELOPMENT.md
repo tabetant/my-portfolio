@@ -12,6 +12,9 @@
 - **Content Refresh**:
   - Updated Poetry Section with authentic poems from 'Heartstrings Unplayed' manuscript (English, French, Spanish).
   - Replaced "Portfolio V1" with "Aspire Web Suite" to highlight recent professional work.
+- **Personal Section**: 
+  - Added `Personal.tsx` utilizing a Bento Grid layout to showcase "Antoine the Human" alongside "Antoine the Engineer".
+  - Integrated personal photography (Music, Food, Aesthetic).
   - **Fonts**: Inter (Sans), JetBrains Mono (Mono), Playfair Display (Serif/Poetry).
   - **Structure**: Moving towards a Single Page Application (SPA) with smooth scrolling sections.
 
