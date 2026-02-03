@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Brain, FileText, Globe, Code2 } from "lucide-react";
 import Link from "next/link";
-import VideoPlayer from "@/components/VideoPlayer";
+import YouTubePlayer from "@/components/YouTubePlayer";
 
 export default function NexusProject() {
     return (
@@ -39,13 +39,11 @@ export default function NexusProject() {
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.8 }}
-                    className="rounded-xl overflow-hidden shadow-2xl border border-slate-800 bg-slate-900/50 backdrop-blur-sm aspect-video max-w-5xl mx-auto"
+                    className="max-w-5xl mx-auto"
                 >
-                    <VideoPlayer
-                        bucket="portfolio-media"
-                        filename="n3xu$_demo.mov"
-                        poster="/images/nexus-poster.jpg"
-                        className="w-full h-full"
+                    <YouTubePlayer
+                        videoId="S2v6a2zS6o8"
+                        title="N3XU$ Neural Audit Demo"
                     />
                 </motion.div>
 

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Globe, Users, GraduationCap, Database } from "lucide-react";
-import VideoPlayer from "@/components/VideoPlayer";
+import YouTubePlayer from "@/components/YouTubePlayer";
 
 export default function WorldEdProject() {
     return (
@@ -38,13 +38,11 @@ export default function WorldEdProject() {
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.8 }}
-                    className="rounded-xl overflow-hidden shadow-2xl border border-slate-800 bg-slate-900/50 backdrop-blur-sm aspect-video max-w-5xl mx-auto"
+                    className="max-w-5xl mx-auto"
                 >
-                    <VideoPlayer
-                        bucket="portfolio-media"
-                        filename="worlded_demo.mp4"
-                        poster="/images/worlded-poster.jpg"
-                        className="w-full h-full"
+                    <YouTubePlayer
+                        videoId="Z-Jti-oaPSQ"
+                        title="WorldEd Platform Demo"
                     />
                 </motion.div>
 
