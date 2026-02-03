@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/Navbar";
 
 // 1. Sans Serif (Primary)
 const inter = Inter({
@@ -44,7 +45,8 @@ export default function RootLayout({
           playfair.variable
         )}
       >
-        <main className="relative flex min-h-screen flex-col">
+        <Navbar />
+        <main className="relative flex min-h-screen flex-col pt-20">
           {children}
         </main>
       </body>

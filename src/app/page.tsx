@@ -1,18 +1,10 @@
-import About from "@/components/sections/About";
-import Contact from "@/components/sections/Contact";
 import Hero from "@/components/sections/Hero";
-import Personal from "@/components/sections/Personal";
-import Poetry from "@/components/sections/Poetry";
-import Projects from "@/components/sections/Projects";
+import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
       <Hero />
-      <Personal />
-      <About />
-      <Projects />
-      <Poetry />
       <Contact />
     </div>
   );
