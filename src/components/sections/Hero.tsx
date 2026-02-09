@@ -56,7 +56,7 @@ export default function Hero() {
 
                     <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                         <Link
-                            href="#projects"
+                            href="#featured-projects"
                             className="flex items-center gap-2 rounded-lg bg-emerald-600 px-6 py-3 font-medium text-white transition-colors hover:bg-emerald-500"
                         >
                             View Work <ArrowRight className="h-4 w-4" />

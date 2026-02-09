@@ -4,13 +4,11 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, Rocket, BookOpen, Clock, User, Home } from "lucide-react";
+import { Menu, X, ChevronDown, Rocket, BookOpen, User, Home } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
     { name: "Home", href: "/", icon: Home },
-    { name: "Beyond the Code", href: "/beyond-the-code", icon: User },
-    { name: "Timeline", href: "/timeline", icon: Clock },
     {
         name: "Projects",
         href: "/projects", // This won't be a direct link, but a dropdown trigger
@@ -21,6 +19,7 @@ const navItems = [
             { name: "WorldEd", href: "/projects/worlded" },
         ]
     },
+    { name: "About Me", href: "/about", icon: User },
     { name: "Poetry", href: "/poetry", icon: BookOpen },
 ];
 
