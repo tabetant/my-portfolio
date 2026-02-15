@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Antoine's Digital Portfolio
 
-## Getting Started
+Welcome to the source code of my digital home. This repository houses my personal portfolio—a reflection of my journey as a **2nd-year Computer Engineering student at the University of Toronto** and my obsession with building tools that bridge the gap between complex engineering and intuitive user experiences.
 
-First, run the development server:
+## 🛠 The Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I don't just write code; I architect systems. This site is built with:
+* **Framework:** Next.js (App Router)
+* **Styling:** Tailwind CSS / SwiftUI-inspired aesthetics
+* **Database/ORM:** Supabase & Drizzle
+* **Deployment:** Vercel
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗 Featured Projects
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Project | Description | Tech Used |
+| :--- | :--- | :--- |
+| **WorldEd** | An interactive platform featuring **Eddi**, an autonomous AI agent capable of assisting users through dynamic interactions and real-time debugging. | Next.js, AI Agents, LLMs |
+| **Nexus** | An AI-powered tool for students to perform semantic searches on their academic materials, simplifying study workflows. | Python, Next.js, Supabase |
+| **EZGL Map** | A high-performance GIS software visualizing Toronto, featuring custom graphics and optimized data structures. | C++, EZGL |
+| **Click A Mole** | A playful Pokémon-themed "Whac-A-Mole" game where players target Diglett to test their reflexes. | JavaScript / Web Tech |
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Beyond the Code
+Engineering is my discipline, but creativity is my fuel. My portfolio highlights:
+* **Heartstrings Unplayed:** My upcoming trilingual poetry collection (English, French, Spanish) exploring themes of connection and self-expression.
+* **Leadership:** My journey with **Scouts du Liban**, HMUN 2024 advising, and serving as a summer camp counselor.
+* **Music:** When I’m not debugging Assembly on a **DE1-SoC**, I’m likely singing or playing guitar and piano.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📈 Current Focus
+* **Education:** University of Toronto, Computer Engineering (Class of 2027).
+* **Technical:** Implementing low-level interrupts and audio core functionality for hardware-software integration.
+* **Professional:** Crafting a narrative that shows I'm more than just a coder.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🤝 Connect with Me
+I’m always down to talk about Pokémon, Amex Cobalt travel hacks, or the nuances of semantic search.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* **University:** University of Toronto (Skule™)
+* **LinkedIn:** [Insert your Link]
+* **Portfolio:** [Insert your deployed URL]
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Built with ❤️ and a lot of coffee in Toronto.*
