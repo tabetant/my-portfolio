@@ -7,13 +7,22 @@ import { cn } from "@/lib/utils";
 
 const featuredProjects = [
     {
+        title: "WorldEd",
+        description: "AI-powered STEM learning platform with intelligent course delivery, an agentic AI assistant, and real-time progress tracking.",
+        tags: ["Next.js 15", "AI/ML", "PostgreSQL"],
+        image: "/images/projects/worlded_preview.png",
+        link: "/projects/worlded",
+        color: "from-emerald-500 to-teal-500",
+        delay: 0.1
+    },
+    {
         title: "N3XU$ Identity",
         description: "Decentralized identity protocol using Neural Audit for advanced document verification.",
         tags: ["Next.js", "AI/ML", "Blockchain"],
-        image: "/images/projects/nexus_preview.png", // Assuming image path, will use placeholders if needed or confirm
+        image: "/images/projects/nexus_preview.png",
         link: "/projects/nexus",
         color: "from-violet-500 to-fuchsia-500",
-        delay: 0.1
+        delay: 0.2
     },
     {
         title: "Aspire Suite",
@@ -22,17 +31,8 @@ const featuredProjects = [
         image: "/images/projects/aspire_preview.png",
         link: "/projects/aspire",
         color: "from-blue-500 to-cyan-500",
-        delay: 0.2
-    },
-    {
-        title: "WorldEd",
-        description: "Connecting students globally with educational resources and mentorship.",
-        tags: ["React", "Education", "Platform"],
-        image: "/images/projects/worlded_preview.png",
-        link: "/projects/worlded",
-        color: "from-amber-500 to-orange-500",
         delay: 0.3
-    }
+    },
 ];
 
 export default function FeaturedProjects() {

@@ -7,6 +7,14 @@ import { cn } from "@/lib/utils";
 
 const projects = [
     {
+        title: "WorldEd",
+        description: "AI-powered STEM learning platform with Gemini-based AI assistant, real-time progress tracking, LaTeX rendering, and enterprise-grade auth. ~40% less client JS via React Server Components.",
+        tags: ["Next.js 15", "TypeScript", "Gemini AI", "Supabase"],
+        github: "https://github.com/tabetant/worlded",
+        demo: null,
+        color: "border-emerald-500/50 hover:border-emerald-500",
+    },
+    {
         title: "N3XU$ Identity Protocol",
         description: "A decentralized identity protocol leveraging AI for document auditing and verification. Features the 'Neural Audit' system demonstrated above.",
         tags: ["Next.js", "Solidity", "Python", "NLP"],
@@ -18,17 +26,9 @@ const projects = [
         title: "Click-A-Mole Engine",
         description: "A high-performance C++ game engine built from scratch. Features custom memory management, physics integration, and zero-dependency rendering.",
         tags: ["C++", "OpenGL", "Engine Architecture"],
-        github: "https://github.com/tabetant/click-a-mole", // Placeholder URL
+        github: "https://github.com/tabetant/click-a-mole",
         demo: null,
         color: "border-emerald-500/50 hover:border-emerald-500",
-    },
-    {
-        title: "WorldEd",
-        description: "Global education initiative platform connecting students with resources and mentorship opportunities.",
-        tags: ["React", "Node.js", "MongoDB"],
-        github: null,
-        demo: null,
-        color: "border-amber-500/50 hover:border-amber-500",
     },
     {
         title: "Aspire Web Suite",
