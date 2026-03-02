@@ -3,7 +3,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { BookOpen, Feather } from "lucide-react";
+import { BookOpen, Feather, Instagram } from "lucide-react";
+import Link from "next/link";
 
 type Language = "EN" | "FR" | "ES";
 
@@ -114,6 +115,28 @@ export default function Poetry() {
                             </div>
                         </motion.div>
                     </AnimatePresence>
+                </div>
+
+                {/* Social Links */}
+                <div className="mt-16 flex items-center gap-6">
+                    <Link
+                        href="https://www.instagram.com/heartstringsunplayed?igsh=MTU3ZXNtMGFiMGRpbQ%3D%3D&utm_source=qr"
+                        target="_blank"
+                        className="flex items-center gap-2 text-rose-400/60 hover:text-rose-300 transition-colors font-serif text-sm"
+                    >
+                        <Instagram className="h-5 w-5" />
+                        Instagram
+                    </Link>
+                    <Link
+                        href="https://www.tiktok.com/@heartstringsunplayed?_r=1&_t=ZS-94MZf8zKp5W"
+                        target="_blank"
+                        className="flex items-center gap-2 text-rose-400/60 hover:text-rose-300 transition-colors font-serif text-sm"
+                    >
+                        <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.73a8.19 8.19 0 004.76 1.52V6.78a4.83 4.83 0 01-1-.09z" />
+                        </svg>
+                        TikTok
+                    </Link>
                 </div>
 
                 {/* Footer Icon */}

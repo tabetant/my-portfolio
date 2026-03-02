@@ -16,6 +16,7 @@ const navItems = [
         dropdown: [
             { name: "WorldEd", href: "/projects/worlded" },
             { name: "N3XU$ Identity", href: "/projects/nexus" },
+            { name: "Click-A-Mole", href: "/projects/click-a-mole" },
             { name: "Aspire Suite", href: "/projects/aspire" },
         ]
     },

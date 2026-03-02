@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Laptop, Code2, TrendingUp, Server } from "lucide-react";
+import { Laptop, Code2, TrendingUp, Server, Globe } from "lucide-react";
+import Link from "next/link";
 
 export default function AspireProject() {
     return (
@@ -87,6 +88,16 @@ export default function AspireProject() {
                                     Tailwind CSS
                                 </li>
                             </ul>
+                        </div>
+
+                        <div className="p-6 rounded-xl border border-slate-800 bg-slate-900/30">
+                            <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                                <Globe className="h-5 w-5 text-indigo-400" />
+                                Key Links
+                            </h3>
+                            <Link href="https://github.com/tabetant/cs-ticket-system" target="_blank" className="block w-full py-2 px-4 rounded-lg bg-slate-800 hover:bg-slate-700 text-center transition-colors">
+                                View on GitHub
+                            </Link>
                         </div>
                     </motion.div>
 

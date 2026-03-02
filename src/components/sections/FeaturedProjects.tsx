@@ -17,20 +17,20 @@ const featuredProjects = [
     },
     {
         title: "N3XU$ Identity",
-        description: "Decentralized identity protocol using Neural Audit for advanced document verification.",
-        tags: ["Next.js", "AI/ML", "Blockchain"],
+        description: "An identity-based academic intelligence platform that shifts focus from grades to becoming an engineer, treating academic data as signal.",
+        tags: ["Next.js 15", "FastAPI", "Gemini AI"],
         image: "/images/projects/nexus_preview.png",
         link: "/projects/nexus",
         color: "from-violet-500 to-fuchsia-500",
         delay: 0.2
     },
     {
-        title: "Aspire Suite",
-        description: "Enterprise-grade web applications optimized for scale and performance.",
-        tags: ["Full Stack", "Optimization", "Supabase"],
+        title: "Click-A-Mole",
+        description: "A high-performance embedded mechatronics system transforming classic arcade gameplay with real-time FSM logic and hardware-software co-design.",
+        tags: ["C/C++", "Embedded Systems", "Arduino"],
         image: "/images/projects/aspire_preview.png",
-        link: "/projects/aspire",
-        color: "from-blue-500 to-cyan-500",
+        link: "/projects/click-a-mole",
+        color: "from-emerald-500 to-teal-500",
         delay: 0.3
     },
 ];
