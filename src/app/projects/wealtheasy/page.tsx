@@ -11,7 +11,6 @@ import {
     Server,
     Layers,
     Github,
-    ExternalLink,
     ArrowRight
 } from "lucide-react";
 import YouTubePlayer from "@/components/YouTubePlayer";
