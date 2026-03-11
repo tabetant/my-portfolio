@@ -7,6 +7,14 @@ import { cn } from "@/lib/utils";
 
 const projects = [
     {
+        title: "WealthEasy",
+        description: "AI system that monitors transactions, detects life events, and generates personalized financial briefs via Claude API — with a human advisor review checkpoint before anything reaches the client. Built for Canadian securities compliance.",
+        tags: ["Next.js 14", "Claude API", "PostgreSQL", "Supabase"],
+        github: "https://github.com/mohamadmsalman82/WealthSimple-AIBuilderProject",
+        demo: "DEMO_VIDEO_URL",
+        color: "border-emerald-500/50 hover:border-emerald-500",
+    },
+    {
         title: "WorldEd",
         description: "AI-powered STEM learning platform with Gemini-based AI assistant, real-time progress tracking, LaTeX rendering, and enterprise-grade auth. ~40% less client JS via React Server Components.",
         tags: ["Next.js 15", "TypeScript", "Gemini AI", "Supabase"],

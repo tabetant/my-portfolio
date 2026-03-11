@@ -7,6 +7,15 @@ import { cn } from "@/lib/utils";
 
 const featuredProjects = [
     {
+        title: "WealthEasy",
+        description: "AI system that monitors transactions, detects life events, and generates personalized financial briefs via Claude API — with a human advisor review checkpoint before anything reaches the client.",
+        tags: ["Next.js 14", "Claude API", "PostgreSQL"],
+        image: "/images/projects/wealtheasy_preview.png",
+        link: "/projects/wealtheasy",
+        color: "from-emerald-500 to-teal-500",
+        delay: 0.05
+    },
+    {
         title: "WorldEd",
         description: "AI-powered STEM learning platform with intelligent course delivery, an agentic AI assistant, and real-time progress tracking.",
         tags: ["Next.js 15", "AI/ML", "PostgreSQL"],

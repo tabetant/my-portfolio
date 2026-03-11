@@ -14,6 +14,7 @@ const navItems = [
         href: "/projects", // This won't be a direct link, but a dropdown trigger
         icon: Rocket,
         dropdown: [
+            { name: "WealthEasy", href: "/projects/wealtheasy" },
             { name: "WorldEd", href: "/projects/worlded" },
             { name: "N3XU$ Identity", href: "/projects/nexus" },
             { name: "Click-A-Mole", href: "/projects/click-a-mole" },

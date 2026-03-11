@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Brain, FileText, Globe, Code2, Target, Activity, Shield, Users } from "lucide-react";
+import { Brain, FileText, Globe, Code2, Target, Activity, Shield, Users, Heart, DollarSign, AlertTriangle } from "lucide-react";
 import Link from "next/link";
 import YouTubePlayer from "@/components/YouTubePlayer";
 
@@ -197,6 +197,91 @@ export default function NexusProject() {
                             <p className="text-slate-300 relative z-10 text-lg">
                                 N3XU$ redefines the academic experience by treating every syllabus, grade, and submission as identity data — shifting the focus from chasing numbers to engineering who you become. It&apos;s not a GPA tracker; it&apos;s an identity protocol.
                             </p>
+                        </motion.section>
+
+                        {/* For the User */}
+                        <motion.section
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                                <Heart className="h-6 w-6 text-pink-400" />
+                                For the User
+                            </h2>
+                            <p className="text-slate-400 leading-relaxed text-lg">
+                                Right now, you have six tabs open — Quercus, Notion, a grade calculator, your syllabus PDF, a spreadsheet, and your notes. N3XU$ collapses all of that into one identity-aware system. Instead of asking &quot;what do I need on the final?&quot;, you&apos;re asking &quot;am I becoming the engineer I set out to be?&quot; The Resonance metric gives you a real-time answer — not just a grade, but a signal of alignment between your current trajectory and your long-term goal.
+                            </p>
+                        </motion.section>
+
+                        {/* Business Viability */}
+                        <motion.section
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                                <DollarSign className="h-6 w-6 text-emerald-400" />
+                                Business Viability
+                            </h2>
+                            <div className="space-y-4">
+                                <div className="p-5 rounded-xl bg-slate-900/30 border border-slate-800 hover:border-emerald-500/30 transition-colors">
+                                    <h3 className="text-lg font-semibold text-slate-200 mb-2">B2C SaaS</h3>
+                                    <p className="text-slate-400">
+                                        Freemium tier for all students; $8–12/month unlocks full Resonance tracking and Telemetry Auditing. UofT Engineering alone represents 20,000+ potential users.
+                                    </p>
+                                </div>
+                                <div className="p-5 rounded-xl bg-slate-900/30 border border-slate-800 hover:border-emerald-500/30 transition-colors">
+                                    <h3 className="text-lg font-semibold text-slate-200 mb-2">B2B Institutional</h3>
+                                    <p className="text-slate-400">
+                                        License directly to engineering departments or student unions. The ECE231-specific tuning is a feature, not a limitation — it demonstrates curriculum-aware AI that schools can adopt as their own.
+                                    </p>
+                                </div>
+                                <div className="p-5 rounded-xl bg-slate-900/30 border border-slate-800 hover:border-emerald-500/30 transition-colors">
+                                    <h3 className="text-lg font-semibold text-slate-200 mb-2">Non-Profit Path</h3>
+                                    <p className="text-slate-400">
+                                        If the mission is equity in engineering education (first-gen students, under-resourced institutions), a non-profit structure funded by grants from NSERC, Google.org, or similar bodies is genuinely viable and more mission-aligned than a VC-backed model.
+                                    </p>
+                                </div>
+                                <div className="p-5 rounded-xl bg-slate-900/30 border border-slate-800 hover:border-emerald-500/30 transition-colors">
+                                    <h3 className="text-lg font-semibold text-slate-200 mb-2">Unit Economics</h3>
+                                    <p className="text-slate-400">
+                                        Every Neural Audit and Telemetry analysis costs real API spend (Gemini 2.0 Flash per call). At scale, the freemium tier needs hard usage caps or the margin disappears. This is the first real constraint to solve before monetizing.
+                                    </p>
+                                </div>
+                            </div>
+                        </motion.section>
+
+                        {/* Honest Tensions */}
+                        <motion.section
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                                <AlertTriangle className="h-6 w-6 text-amber-400" />
+                                Honest Tensions
+                            </h2>
+                            <div className="space-y-4">
+                                <div className="p-5 rounded-xl bg-slate-900/30 border border-slate-800 hover:border-amber-500/30 transition-colors">
+                                    <h3 className="text-lg font-semibold text-slate-200 mb-2">Retention cliff</h3>
+                                    <p className="text-slate-400">
+                                        Engagement spikes around midterms and finals, then drops. The product needs a compelling reason to stay open in week 3 of a quiet semester.
+                                    </p>
+                                </div>
+                                <div className="p-5 rounded-xl bg-slate-900/30 border border-slate-800 hover:border-amber-500/30 transition-colors">
+                                    <h3 className="text-lg font-semibold text-slate-200 mb-2">Identity vs. gimmick</h3>
+                                    <p className="text-slate-400">
+                                        The Archetype system (Visionary Architect, Detailed Engineer) is only valuable if it actually shifts user behavior. Without longitudinal data showing it changes study habits, it risks being aesthetic over substance.
+                                    </p>
+                                </div>
+                                <div className="p-5 rounded-xl bg-slate-900/30 border border-slate-800 hover:border-amber-500/30 transition-colors">
+                                    <h3 className="text-lg font-semibold text-slate-200 mb-2">Vertical vs. horizontal</h3>
+                                    <p className="text-slate-400">
+                                        N3XU$ is precisely tuned for UofT ECE. Scaling to humanities, law, or medicine requires a generalized syllabus parser and a rethinking of what &quot;Telemetry&quot; even means outside of circuit labs. The right call may be to stay vertical and own one curriculum deeply rather than expand prematurely.
+                                    </p>
+                                </div>
+                            </div>
                         </motion.section>
 
                     </div>
