@@ -10,7 +10,7 @@ interface YouTubePlayerProps {
 
 export default function YouTubePlayer({ videoId, title = "YouTube video player", className }: YouTubePlayerProps) {
     return (
-        <div className={cn("relative w-full aspect-video rounded-xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl", className)}>
+        <div className={cn("relative w-full aspect-video rounded-xl overflow-hidden border border-zinc-200 bg-zinc-100 shadow-2xl", className)}>
             <iframe
                 src={`https://www.youtube.com/embed/${videoId}`}
                 title={title}

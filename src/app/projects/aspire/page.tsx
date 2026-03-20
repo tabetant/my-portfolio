@@ -1,154 +1,180 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { Laptop, Code2, TrendingUp, Server, Globe } from "lucide-react";
 import Link from "next/link";
+import { Check } from "lucide-react";
 
-export default function AspireProject() {
-    return (
-        <div className="min-h-screen bg-slate-950 text-slate-200 pb-24">
-            {/* Hero Section */}
-            <section className="relative h-[50vh] flex items-center justify-center overflow-hidden bg-slate-900/50">
-                <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5 mix-blend-overlay" />
-                <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-transparent to-slate-950" />
+const GITHUB = "https://github.com/tabetant/cs-ticket-system";
 
-                <div className="container mx-auto px-6 relative z-10 text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-sm text-amber-300 mb-6">
-                            <Laptop className="h-4 w-4" />
-                            <span>Software Engineering Internship</span>
-                        </div>
-                        <h1 className="text-4xl md:text-6xl font-bold text-slate-100 mb-4">
-                            Aspire Web Suite
-                        </h1>
-                        <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-                            Full-Stack Engineering for High-Growth Scale-Ups
-                        </p>
-                    </motion.div>
-                </div>
-            </section>
+const stats = [
+  { num: "35%", label: "Latency Reduced" },
+  { num: "5", label: "Apps Built" },
+  { num: "1,000+", label: "Requests / Day" },
+  { num: "Production", label: "Deployment" },
+];
 
-            <div className="container mx-auto px-6 relative z-20">
-                {/* Stats Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24 -mt-10">
-                    {[
-                        { label: "Backend Latency Reduction", value: "35%", icon: TrendingUp, color: "text-emerald-400" },
-                        { label: "Full-Stack Apps Engineered", value: "5", icon: Code2, color: "text-amber-400" },
-                        { label: "Daily Requests Processed", value: "1,000+", icon: Server, color: "text-blue-400" },
-                    ].map((stat, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            className="bg-slate-900/80 backdrop-blur-md p-6 rounded-xl border border-slate-800 shadow-xl flex flex-col items-center text-center"
-                        >
-                            <stat.icon className={`h-8 w-8 mb-4 ${stat.color}`} />
-                            <div className={`text-4xl font-bold mb-2 ${stat.color}`}>{stat.value}</div>
-                            <div className="text-slate-400 font-medium">{stat.label}</div>
-                        </motion.div>
-                    ))}
-                </div>
+const techStack = [
+  "Next.js (React)",
+  "TypeScript",
+  "Supabase (PostgreSQL)",
+  "Tailwind CSS",
+];
 
-                {/* Case Study Content */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+const features = [
+  {
+    title: "Performance Optimization",
+    desc: "Refactored legacy API endpoints using efficient SQL joins and indexing in Supabase. Implemented caching and SSR in Next.js, resulting in a measurable 35% reduction in backend latency.",
+  },
+  {
+    title: "Internal Tooling",
+    desc: "Architected and deployed 5 internal full-stack applications that automated manual data entry workflows and provided real-time analytics dashboards for the operations team.",
+  },
+];
 
-                    {/* Sidebar: Tech Stack */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="lg:col-span-1 space-y-8"
-                    >
-                        <div className="p-6 rounded-xl border border-slate-800 bg-slate-900/30">
-                            <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                                <Code2 className="h-5 w-5 text-amber-400" />
-                                Tech Stack
-                            </h3>
-                            <ul className="space-y-3 text-slate-400">
-                                <li className="flex items-center gap-3">
-                                    <div className="h-2 w-2 rounded-full bg-black/60 border border-white/20" />
-                                    Next.js (React Framework)
-                                </li>
-                                <li className="flex items-center gap-3">
-                                    <div className="h-2 w-2 rounded-full bg-blue-500" />
-                                    TypeScript
-                                </li>
-                                <li className="flex items-center gap-3">
-                                    <div className="h-2 w-2 rounded-full bg-green-500" />
-                                    Supabase (PostgreSQL)
-                                </li>
-                                <li className="flex items-center gap-3">
-                                    <div className="h-2 w-2 rounded-full bg-teal-500" />
-                                    Tailwind CSS
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="p-6 rounded-xl border border-slate-800 bg-slate-900/30">
-                            <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                                <Globe className="h-5 w-5 text-indigo-400" />
-                                Key Links
-                            </h3>
-                            <Link href="https://github.com/tabetant/cs-ticket-system" target="_blank" className="block w-full py-2 px-4 rounded-lg bg-slate-800 hover:bg-slate-700 text-center transition-colors">
-                                View on GitHub
-                            </Link>
-                        </div>
-                    </motion.div>
-
-                    {/* Main Content */}
-                    <div className="lg:col-span-2 space-y-12">
-
-                        {/* The Challenge */}
-                        <motion.section
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                        >
-                            <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                                <Server className="h-6 w-6 text-rose-400" />
-                                The Challenge
-                            </h2>
-                            <p className="text-slate-400 leading-relaxed text-lg">
-                                The existing infrastructure was struggling to keep up with user demand. Response times were sluggish due to unoptimized database queries and heavy client-side rendering. Additionally, the team needed rapid prototyping of internal tools to streamline operations, requiring versatile full-stack engineering skills.
-                            </p>
-                        </motion.section>
-
-                        {/* Engineering Solutions */}
-                        <motion.section
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                        >
-                            <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                                <Laptop className="h-6 w-6 text-amber-400" />
-                                Engineering Solutions
-                            </h2>
-                            <div className="space-y-6">
-                                <div className="p-6 rounded-xl bg-slate-900/30 border border-slate-800 hover:border-amber-500/30 transition-colors">
-                                    <h3 className="text-xl font-bold text-slate-200 mb-2">Performance Optimization</h3>
-                                    <p className="text-slate-400">
-                                        Refactored legacy API endpoints to use efficient SQL joins and indexing in Supabase. Implemented caching strategies and server-side rendering (SSR) in Next.js, resulting in a measurable <span className="text-emerald-400 font-bold">35% reduction in backend latency</span>.
-                                    </p>
-                                </div>
-
-                                <div className="p-6 rounded-xl bg-slate-900/30 border border-slate-800 hover:border-amber-500/30 transition-colors">
-                                    <h3 className="text-xl font-bold text-slate-200 mb-2">Internal Tooling</h3>
-                                    <p className="text-slate-400">
-                                        Architected and deployed 5 internal full-stack applications. These tools automated manual data entry workflows and provided real-time analytics dashboards for the operations team, significantly boosting internal productivity.
-                                    </p>
-                                </div>
-                            </div>
-                        </motion.section>
-
-                    </div>
-                </div>
-            </div>
+export default function AspirePage() {
+  return (
+    <div className="min-h-screen">
+      {/* ── HERO ── */}
+      <section className="bg-zinc-950 py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <Link
+            href="/#projects"
+            className="text-zinc-400 hover:text-white text-sm transition-colors mb-8 inline-block"
+          >
+            ← All Projects
+          </Link>
+          <div className="mt-6 mb-4 inline-flex items-center gap-2 rounded-full border border-violet-600/30 bg-violet-600/10 px-3 py-1 text-sm text-violet-300">
+            Software Engineering Internship
+          </div>
+          <h1 className="text-white text-5xl md:text-6xl font-extrabold tracking-tight mb-4">
+            Aspire Web Suite
+          </h1>
+          <p className="text-zinc-400 text-xl mb-8 max-w-2xl leading-relaxed">
+            Full-stack engineering for high-growth scale-ups — optimising performance and building
+            internal tooling during a production internship in Beirut.
+          </p>
+          <div className="flex flex-wrap gap-3 mb-10">
+            {["Next.js", "TypeScript", "Supabase", "Tailwind CSS"].map((tag) => (
+              <span
+                key={tag}
+                className="bg-zinc-800 border border-zinc-700 text-zinc-300 text-xs font-medium px-3 py-1 rounded-full"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-4">
+            <Link
+              href={GITHUB}
+              target="_blank"
+              className="bg-violet-600 hover:bg-violet-500 text-white font-semibold px-6 py-3 rounded-full text-sm transition-colors"
+            >
+              View on GitHub →
+            </Link>
+          </div>
         </div>
-    );
+      </section>
+
+      {/* ── STATS ── */}
+      <section className="bg-zinc-900 border-y border-zinc-800">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="flex divide-x divide-zinc-700">
+            {stats.map((s) => (
+              <div key={s.label} className="flex-1 py-10 text-center px-4">
+                <div className="text-white font-bold text-2xl leading-none">{s.num}</div>
+                <div className="text-zinc-400 text-xs mt-2 leading-snug">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CONTENT ── */}
+      <section className="bg-white py-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {/* Main content */}
+            <div className="lg:col-span-2 space-y-10">
+              <div>
+                <h2 className="text-zinc-900 text-2xl font-bold mb-4">Overview</h2>
+                <div className="text-zinc-600 text-lg leading-relaxed space-y-4">
+                  <p>
+                    During my internship at Aspire, the existing infrastructure was struggling to
+                    keep up with user demand. Response times were sluggish due to unoptimised
+                    database queries and heavy client-side rendering.
+                  </p>
+                  <p>
+                    Additionally, the team needed rapid prototyping of internal tools to streamline
+                    operations, requiring versatile full-stack engineering skills across the
+                    complete product lifecycle.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h2 className="text-zinc-900 text-2xl font-bold border-l-4 border-violet-600 pl-4 mb-6">
+                  Engineering Solutions
+                </h2>
+                <div className="space-y-4">
+                  {features.map((f) => (
+                    <div
+                      key={f.title}
+                      className="bg-white border border-zinc-200 rounded-xl p-5 shadow-sm flex gap-4"
+                    >
+                      <Check className="w-5 h-5 text-violet-600 shrink-0 mt-0.5" />
+                      <div>
+                        <p className="text-zinc-900 font-semibold mb-1">{f.title}</p>
+                        <p className="text-zinc-600 text-sm leading-relaxed">{f.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Sidebar */}
+            <div className="space-y-6">
+              <div className="bg-white border border-zinc-200 rounded-xl p-6">
+                <h3 className="text-zinc-900 font-bold text-lg mb-4">Tech Stack</h3>
+                <ul className="space-y-3">
+                  {techStack.map((tech) => (
+                    <li key={tech} className="flex items-center gap-3 text-zinc-600 text-sm">
+                      <div className="w-2 h-2 rounded-full bg-violet-600 shrink-0" />
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-white border border-zinc-200 rounded-xl p-6">
+                <h3 className="text-zinc-900 font-bold text-lg mb-4">Links</h3>
+                <Link
+                  href={GITHUB}
+                  target="_blank"
+                  className="block w-full text-center bg-violet-600 hover:bg-violet-500 text-white font-semibold py-2.5 px-4 rounded-lg transition-colors text-sm"
+                >
+                  View on GitHub →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── NEXT PROJECT (loops back) ── */}
+      <section className="bg-zinc-950 border-t border-zinc-800 py-12">
+        <div className="max-w-5xl mx-auto px-6">
+          <Link
+            href="/projects/wealtheasy"
+            className="group flex items-center justify-between hover:opacity-80 transition-opacity"
+          >
+            <span className="text-zinc-500 text-xs uppercase tracking-widest font-semibold">
+              Back to Start
+            </span>
+            <span className="text-white font-bold text-2xl group-hover:text-violet-400 transition-colors">
+              WealthEasy
+            </span>
+            <span className="text-violet-400 text-2xl">→</span>
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
 }

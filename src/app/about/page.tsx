@@ -1,219 +1,246 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
-import { MapPin, GraduationCap, Briefcase, Heart, Terminal } from "lucide-react";
+import { GraduationCap, Briefcase, Award, MapPin } from "lucide-react";
 
-export default function AboutMe() {
-    return (
-        <section className="bg-slate-950 min-h-screen pt-24 pb-20 overflow-hidden">
-            <div className="container mx-auto px-6 max-w-4xl">
+const photos = [
+  { src: "/images/about-me/me_playing_guitar.jpeg", caption: "Guitar" },
+  { src: "/images/pianoedited.jpg", caption: "Piano" },
+  { src: "/images/about-me/me_singing.JPG", caption: "Singing" },
+  { src: "/images/about-me/food.jpeg", caption: "Good Food" },
+  { src: "/images/about-me/scouts_du_liban.jpg", caption: "Scouts" },
+  { src: "/images/about-me/summer_camp_counselor.jpg", caption: "Camp Counselor" },
+  { src: "/images/about-me/HMUN_2024_Advisor.jpg", caption: "Harvard MUN" },
+];
 
-                {/* Header */}
-                <div className="mb-16 text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        <div className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/50 px-4 py-2 text-sm text-emerald-400 mb-6 font-mono">
-                            <Terminal className="w-4 h-4" /> whoami
-                        </div>
-                        <h1 className="text-4xl md:text-6xl font-bold text-slate-100 mb-6">
-                            More Than Just Code
-                        </h1>
-                        <p className="text-xl text-slate-400 leading-relaxed max-w-2xl mx-auto">
-                            My journey isn&apos;t just a series of commits—it&apos;s a story of leadership, creativity, and a relentless drive to build meaningfully.
-                        </p>
-                    </motion.div>
-                </div>
-
-                <div className="space-y-24 relative">
-                    {/* Vertical Line for larger screens */}
-                    <div className="hidden md:block absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-500/0 via-emerald-500/20 to-emerald-500/0" />
-
-                    {/* Section 1: Origins & Leadership */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="pl-0 md:pl-24 relative"
-                    >
-                        <div className="hidden md:flex absolute left-0 top-0 w-16 h-16 rounded-full bg-slate-900 border border-emerald-500/30 items-center justify-center -translate-x-1/2">
-                            <MapPin className="text-emerald-400 w-6 h-6" />
-                        </div>
-
-                        <h2 className="text-3xl font-bold text-slate-100 mb-6 flex items-center gap-3">
-                            <span className="md:hidden"><MapPin className="text-emerald-400 w-5 h-5" /></span>
-                            Origins & Leadership
-                        </h2>
-
-                        <div className="prose prose-invert prose-lg text-slate-400 max-w-none clearfix">
-                            <div className="md:float-right md:ml-8 md:mb-4 mb-6 relative h-64 w-full md:w-72 rounded-xl overflow-hidden shadow-xl border border-slate-800/50">
-                                <Image
-                                    src="/images/about-me/scouts_du_liban.jpg"
-                                    alt="Leading at Les Scouts du Liban"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-                            <p className="mb-6">
-                                Growing up in <strong>Lebanon</strong>, I learned early on that true leadership is about service. For eight years, I dedicated myself to <strong>Les Scouts du Liban</strong>, looking after a team of young scouts and managing complex logistics.
-                            </p>
-
-                            <div className="md:float-left md:mr-8 md:mb-4 mb-6 relative h-64 w-full md:w-72 rounded-xl overflow-hidden shadow-xl border border-slate-800/50">
-                                <Image
-                                    src="/images/about-me/summer_camp_counselor.jpg"
-                                    alt="Summer Camp Counselor with Youth"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-                            <p className="mb-8">
-                                It was here—organizing camps, leading expeditions, and mentoring peers as a counselor—that I developed the resilience and teamwork skills that now define my engineering approach. I learned that whether you&apos;re navigating a forest or a codebase, clear communication and trust are your best tools.
-                            </p>
-                        </div>
-                    </motion.div>
-
-                    {/* Section 2: The Academic Grind */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="pl-0 md:pl-24 relative"
-                    >
-                        <div className="hidden md:flex absolute left-0 top-0 w-16 h-16 rounded-full bg-slate-900 border border-violet-500/30 items-center justify-center -translate-x-1/2">
-                            <GraduationCap className="text-violet-400 w-6 h-6" />
-                        </div>
-
-                        <h2 className="text-3xl font-bold text-slate-100 mb-6 flex items-center gap-3">
-                            <span className="md:hidden"><GraduationCap className="text-violet-400 w-5 h-5" /></span>
-                            The Academic Grind
-                        </h2>
-
-                        <div className="prose prose-invert prose-lg text-slate-400 max-w-none clearfix">
-                            <div className="md:float-right md:ml-8 md:mb-4 mb-6 relative h-64 w-full md:w-80 rounded-xl overflow-hidden shadow-xl border border-slate-800/50">
-                                <Image
-                                    src="/images/about-me/HMUN_2024_Advisor.jpg"
-                                    alt="Advising at Harvard Model United Nations 2024"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-
-                            <p className="mb-6">
-                                Now at the <strong>University of Toronto</strong>, I&apos;m pursuing Computer Engineering with a focus on AI and Software Systems. Transitioning to a new country and a rigorous academic environment wasn&apos;t easy, but it pushed me to excel.
-                            </p>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                                <div className="p-4 rounded-xl bg-violet-500/10 border border-violet-500/20">
-                                    <h3 className="font-bold text-violet-300 mb-1">Dean&apos;s List Scholar</h3>
-                                    <p className="text-sm">Maintained a 3.83 Cumulative GPA while balancing projects and leadership roles.</p>
-                                </div>
-                                <div className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/20">
-                                    <h3 className="font-bold text-blue-300 mb-1">Harvard Model UN</h3>
-                                    <p className="text-sm">Honed diplomacy and strategy on an international stage.</p>
-                                </div>
-                            </div>
-                            <p>
-                                My academic journey is fueled by a desire to understand the &quot;why&quot; behind the &quot;how&quot;—diving deep into the logic of machines to build smarter systems.
-                            </p>
-                        </div>
-                    </motion.div>
-
-                    {/* Section 3: Engineering in Action */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="pl-0 md:pl-24 relative"
-                    >
-                        <div className="hidden md:flex absolute left-0 top-0 w-16 h-16 rounded-full bg-slate-900 border border-amber-500/30 items-center justify-center -translate-x-1/2">
-                            <Briefcase className="text-amber-400 w-6 h-6" />
-                        </div>
-
-                        <h2 className="text-3xl font-bold text-slate-100 mb-6 flex items-center gap-3">
-                            <span className="md:hidden"><Briefcase className="text-amber-400 w-5 h-5" /></span>
-                            Engineering in Action
-                        </h2>
-
-                        <div className="flex flex-col md:flex-row gap-8 items-start">
-                            <div className="prose prose-invert prose-lg text-slate-400 flex-1">
-                                <p className="mb-4">
-                                    Theory needs practice. As a <strong>Software Engineering Intern at Aspire</strong>, I didn&apos;t just write code; I solved problems.
-                                </p>
-                                <p>
-                                    I optimized backend queries that sliced response latency by <strong>35%</strong> and contributed to scalable architectures. This experience taught me that great code isn&apos;t just correct—it&apos;s efficient, maintainable, and impactful.
-                                </p>
-                            </div>
-                            <div className="w-full md:w-1/3 relative h-48 rounded-xl overflow-hidden border border-slate-800 shadow-lg">
-                                <Image
-                                    src="/images/about-me/professional.jpg"
-                                    alt="Professional Background"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-                        </div>
-                    </motion.div>
-
-                    {/* Section 4: The Creative Soul */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="pl-0 md:pl-24 relative"
-                    >
-                        <div className="hidden md:flex absolute left-0 top-0 w-16 h-16 rounded-full bg-slate-900 border border-rose-500/30 items-center justify-center -translate-x-1/2">
-                            <Heart className="text-rose-400 w-6 h-6" />
-                        </div>
-
-                        <h2 className="text-3xl font-bold text-slate-100 mb-6 flex items-center gap-3">
-                            <span className="md:hidden"><Heart className="text-rose-400 w-5 h-5" /></span>
-                            The Creative Soul
-                        </h2>
-
-                        <div className="prose prose-invert prose-lg text-slate-400 max-w-none mb-8">
-                            <p>
-                                I believe the best engineers are also artists. For me, <strong>music and writing</strong> are not just hobbies—they are essential outlets for expression.
-                            </p>
-                            <p>
-                                With 8 years of guitar playing and songwriting, I find that the structure of a melody is not unlike the architecture of a program. Both require rhythm, harmony, and a touch of soul.
-                            </p>
-                        </div>
-
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                            <div className="relative h-48 rounded-xl overflow-hidden border border-slate-800/50 group">
-                                <Image
-                                    src="/images/about-me/me_playing_guitar.jpeg"
-                                    alt="Playing Guitar"
-                                    fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                />
-                                <div className="absolute bottom-0 left-0 right-0 p-2 bg-black/60 text-xs text-center text-slate-300">Guitar & Songwriting</div>
-                            </div>
-                            <div className="relative h-48 rounded-xl overflow-hidden border border-slate-800/50 group">
-                                <Image
-                                    src="/images/about-me/me_playing_piano.jpg"
-                                    alt="Playing Piano"
-                                    fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                />
-                                <div className="absolute bottom-0 left-0 right-0 p-2 bg-black/60 text-xs text-center text-slate-300">Keys & Harmony</div>
-                            </div>
-                            <div className="relative h-48 col-span-2 md:col-span-1 rounded-xl overflow-hidden border border-slate-800/50 group">
-                                <Image
-                                    src="/images/about-me/me_singing.JPG"
-                                    alt="Singing"
-                                    fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                />
-                                <div className="absolute bottom-0 left-0 right-0 p-2 bg-black/60 text-xs text-center text-slate-300">Vocals</div>
-                            </div>
-                        </div>
-                    </motion.div>
-
-                </div>
+export default function AboutPage() {
+  return (
+    <div className="min-h-screen">
+      {/* ═══════════════════════════════════════════
+          HERO BAND
+      ═══════════════════════════════════════════ */}
+      <section className="bg-zinc-950 py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
+            <div>
+              <p className="text-violet-400 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+                — Background
+              </p>
+              <h1 className="text-white text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-4">
+                My Story
+              </h1>
+              <p className="text-zinc-400 text-xl max-w-2xl leading-relaxed">
+                A timeline of professional experience, academic achievements, and leadership roles
+                that have shaped who I am as an engineer.
+              </p>
             </div>
-        </section>
-    );
+            <div className="relative flex-shrink-0 w-48 h-48 lg:w-56 lg:h-56 rounded-2xl overflow-hidden ring-2 ring-violet-600/40 rotate-2 shadow-xl shadow-violet-900/20">
+              <Image
+                src="/images/about-me/my_aesthetic.jpeg"
+                alt="Antoine Tabet"
+                fill
+                className="object-cover"
+                sizes="224px"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          TIMELINE — white bg
+      ═══════════════════════════════════════════ */}
+      <section className="bg-white py-16">
+        <div className="max-w-5xl mx-auto px-6 flex flex-col gap-12">
+
+          {/* Work Experience */}
+          <div>
+            <div className="flex items-center gap-3 mb-8 pb-4 border-b border-zinc-200">
+              <div className="w-9 h-9 rounded-lg bg-violet-100 flex items-center justify-center">
+                <Briefcase className="w-5 h-5 text-violet-600" />
+              </div>
+              <h2 className="text-zinc-900 text-2xl font-bold">Work Experience</h2>
+            </div>
+
+            <div className="border-l-4 border-violet-600 pl-8 flex flex-col gap-2">
+              <div className="flex justify-between items-start flex-wrap gap-2">
+                <h3 className="text-zinc-900 text-lg font-bold">Software Engineering Intern</h3>
+                <span className="text-zinc-400 text-sm shrink-0">May 2024 – Aug 2024</span>
+              </div>
+              <div className="flex items-center gap-2 text-violet-600 font-medium text-sm mb-3">
+                <span>Aspire</span>
+                <span className="text-zinc-300">•</span>
+                <span className="flex items-center gap-1 text-zinc-500">
+                  <MapPin className="w-3 h-3" /> Beirut, Lebanon
+                </span>
+              </div>
+              <ul className="text-zinc-600 space-y-2 text-[15px] leading-relaxed list-disc list-inside">
+                <li>Optimized backend queries and database interactions, slicing response latency by <strong className="text-zinc-900">35%</strong>.</li>
+                <li>Contributed to designing and implementing scalable backend architectures for enterprise applications.</li>
+                <li>Collaborated in an agile team environment to push features from development to production.</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Education */}
+          <div>
+            <div className="flex items-center gap-3 mb-8 pb-4 border-b border-zinc-200">
+              <div className="w-9 h-9 rounded-lg bg-violet-100 flex items-center justify-center">
+                <GraduationCap className="w-5 h-5 text-violet-600" />
+              </div>
+              <h2 className="text-zinc-900 text-2xl font-bold">Education</h2>
+            </div>
+
+            <div className="border-l-4 border-violet-600 pl-8 flex flex-col gap-2">
+              <div className="flex justify-between items-start flex-wrap gap-2">
+                <h3 className="text-zinc-900 text-lg font-bold">
+                  Bachelor of Applied Science, Computer Engineering
+                </h3>
+                <span className="text-zinc-400 text-sm shrink-0">Sep 2023 – Expected 2027</span>
+              </div>
+              <div className="flex items-center gap-2 text-violet-600 font-medium text-sm mb-4">
+                <span>University of Toronto</span>
+                <span className="text-zinc-300">•</span>
+                <span className="flex items-center gap-1 text-zinc-500">
+                  <MapPin className="w-3 h-3" /> Toronto, ON
+                </span>
+              </div>
+
+              <div className="bg-zinc-50 border border-zinc-200 rounded-xl p-5 mb-4 inline-flex gap-10">
+                <div>
+                  <div className="text-zinc-500 text-xs font-semibold uppercase tracking-widest mb-1">
+                    Cumulative GPA
+                  </div>
+                  <div className="text-zinc-900 font-bold text-xl">
+                    3.83 <span className="text-zinc-400 text-sm font-normal">/ 4.0</span>
+                  </div>
+                </div>
+                <div>
+                  <div className="text-zinc-500 text-xs font-semibold uppercase tracking-widest mb-1">
+                    Honors
+                  </div>
+                  <div className="text-violet-600 font-bold flex items-center gap-1.5 pt-0.5">
+                    <Award className="w-4 h-4" /> Dean&apos;s List Scholar
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-zinc-600 text-[15px] leading-relaxed">
+                Focusing on AI, Software Systems, and Distributed Computing. Coursework includes
+                Data Structures &amp; Algorithms, Digital Systems, Operating Systems, and
+                Advanced Software Engineering.
+              </p>
+            </div>
+          </div>
+
+          {/* Leadership */}
+          <div>
+            <div className="flex items-center gap-3 mb-8 pb-4 border-b border-zinc-200">
+              <div className="w-9 h-9 rounded-lg bg-violet-100 flex items-center justify-center">
+                <Award className="w-5 h-5 text-violet-600" />
+              </div>
+              <h2 className="text-zinc-900 text-2xl font-bold">Leadership &amp; Activities</h2>
+            </div>
+
+            <div className="flex flex-col gap-10">
+              {/* Harvard MUN */}
+              <div className="border-l-4 border-violet-600 pl-8">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-6">
+                  <div className="flex-1">
+                    <div className="flex justify-between items-start flex-wrap gap-2">
+                      <h3 className="text-zinc-900 text-lg font-bold">Advisor &amp; Delegate</h3>
+                      <span className="text-zinc-400 text-sm shrink-0">Jan 2024</span>
+                    </div>
+                    <div className="text-violet-600 font-medium text-sm mb-3">
+                      Harvard Model United Nations
+                    </div>
+                    <p className="text-zinc-600 text-[15px] leading-relaxed">
+                      Honed diplomacy, strategy, and negotiation skills on an international stage,
+                      representing complex geopolitical stances and drafting joint resolutions.
+                    </p>
+                  </div>
+                  <div className="relative w-full sm:w-48 h-36 rounded-xl overflow-hidden flex-shrink-0 ring-1 ring-zinc-200">
+                    <Image
+                      src="/images/about-me/HMUN_2024_Advisor.jpg"
+                      alt="Harvard Model United Nations 2024"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, 192px"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Scouts du Liban */}
+              <div className="border-l-4 border-violet-600 pl-8">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-6">
+                  <div className="flex-1">
+                    <div className="flex justify-between items-start flex-wrap gap-2">
+                      <h3 className="text-zinc-900 text-lg font-bold">Camp Counselor &amp; Leader</h3>
+                      <span className="text-zinc-400 text-sm shrink-0">8 Years</span>
+                    </div>
+                    <div className="text-violet-600 font-medium text-sm mb-3">
+                      Les Scouts du Liban
+                    </div>
+                    <p className="text-zinc-600 text-[15px] leading-relaxed">
+                      Dedicated 8 years to leading teams of young scouts, organizing camps, managing
+                      complex logistics, and developing communication and leadership skills in
+                      high-pressure outdoor environments.
+                    </p>
+                  </div>
+                  <div className="relative w-full sm:w-48 h-36 rounded-xl overflow-hidden flex-shrink-0 ring-1 ring-zinc-200">
+                    <Image
+                      src="/images/about-me/scouts_du_liban.jpg"
+                      alt="Les Scouts du Liban"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, 192px"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════
+          PERSONAL PHOTO STRIP
+      ═══════════════════════════════════════════ */}
+      <section className="bg-[#0a0a0a] py-24">
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="text-violet-400 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+            — Beyond the Code
+          </p>
+          <h2 className="text-white text-4xl font-bold tracking-tight mb-10">
+            When I&apos;m Not Building
+          </h2>
+
+          <div className="relative">
+            <div className="flex gap-5 overflow-x-auto pb-3 scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+              {photos.map((photo) => (
+                <div
+                  key={photo.src}
+                  className="relative flex-shrink-0 w-64 rounded-xl overflow-hidden"
+                  style={{ height: 280 }}
+                >
+                  <Image
+                    src={photo.src}
+                    alt={photo.caption}
+                    fill
+                    className="object-cover"
+                    sizes="256px"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-4 pb-4 pt-10">
+                    <p className="text-zinc-200 text-sm font-medium">{photo.caption}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="pointer-events-none absolute top-0 right-0 bottom-3 w-24 bg-gradient-to-l from-[#0a0a0a] to-transparent" />
+          </div>
+          <p className="text-zinc-600 text-xs mt-3 tracking-wide">scroll to explore →</p>
+        </div>
+      </section>
+    </div>
+  );
 }
