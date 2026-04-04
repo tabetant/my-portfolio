@@ -1,24 +1,19 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Playfair_Display } from "next/font/google";
+import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 
-const inter = Inter({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-space-grotesk",
   display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains-mono",
-  display: "swap",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair-display",
   display: "swap",
 });
 
@@ -37,9 +32,8 @@ export default function RootLayout({
         suppressHydrationWarning
         className={cn(
           "min-h-screen bg-[#0a0a0a] font-sans antialiased text-white",
-          inter.variable,
-          jetbrainsMono.variable,
-          playfair.variable
+          spaceGrotesk.variable,
+          jetbrainsMono.variable
         )}
       >
         <Navbar />

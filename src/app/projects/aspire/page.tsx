@@ -35,7 +35,7 @@ export default function AspirePage() {
       <section className="bg-zinc-950 py-20">
         <div className="max-w-5xl mx-auto px-6">
           <Link
-            href="/#projects"
+            href="/projects"
             className="text-zinc-400 hover:text-white text-sm transition-colors mb-8 inline-block"
           >
             ← All Projects

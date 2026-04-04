@@ -25,9 +25,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans:  ["var(--font-inter)", "sans-serif"],
-        mono:  ["var(--font-jetbrains-mono)", "monospace"],
-        serif: ["var(--font-playfair-display)", "serif"],
+        sans: ["var(--font-space-grotesk)", "sans-serif"],
+        mono: ["var(--font-jetbrains-mono)", "monospace"],
       },
     },
   },
