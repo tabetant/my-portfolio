@@ -1,6 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Check } from "lucide-react";
 import YouTubePlayer from "@/components/YouTubePlayer";
+import ShareButtons from "@/components/ShareButtons";
+
+export const metadata: Metadata = {
+  title: "N3XU$ Identity Protocol | Antoine Tabet",
+  description: "Identity-based academic intelligence platform built with Gemini 2.0, Next.js 15, and FastAPI for UofT ECE students.",
+  openGraph: {
+    title: "N3XU$ Identity Protocol | Antoine Tabet",
+    description: "AI-native academic telemetry dashboard with neural audit engine and resonance monitoring.",
+    url: "https://antoinetabet.vercel.app/projects/nexus",
+  },
+};
 
 const GITHUB = "https://github.com/X-Abby-X/UofTHacks26";
 
@@ -167,6 +179,8 @@ export default function NexusPage() {
                   View on GitHub →
                 </Link>
               </div>
+
+              <ShareButtons title="N3XU$ Identity Protocol — academic intelligence by Antoine Tabet" />
             </div>
           </div>
         </div>

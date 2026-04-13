@@ -1,6 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Check } from "lucide-react";
 import YouTubePlayer from "@/components/YouTubePlayer";
+import ShareButtons from "@/components/ShareButtons";
+
+export const metadata: Metadata = {
+  title: "WorldEd | Antoine Tabet",
+  description: "Full-stack educational platform that transforms STEM learning through intelligent course delivery, real-time progress tracking, and an AI learning assistant.",
+  openGraph: {
+    title: "WorldEd | Antoine Tabet",
+    description: "AI-powered adaptive learning platform with Socratic tutor, RAG pipeline, and gamified learning.",
+    url: "https://antoinetabet.vercel.app/projects/worlded",
+  },
+};
 
 const GITHUB = "https://github.com/tabetant/worlded";
 
@@ -170,6 +182,8 @@ export default function WorldEdPage() {
                   View on GitHub →
                 </Link>
               </div>
+
+              <ShareButtons title="WorldEd — AI learning platform by Antoine Tabet" />
             </div>
           </div>
         </div>

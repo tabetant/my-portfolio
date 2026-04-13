@@ -80,10 +80,10 @@ export default function Navbar() {
             href="/Antoine_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex items-center gap-2 bg-violet-600 hover:bg-violet-500 text-white text-sm font-semibold px-4 py-2 rounded-full transition-all duration-150 hover:shadow-md hover:shadow-violet-600/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+            className="flex items-center gap-2 bg-violet-600 hover:bg-violet-500 text-white text-sm font-semibold px-4 py-2 rounded-full transition-all duration-150 hover:shadow-md hover:shadow-violet-600/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
           >
             <Download className="w-3.5 h-3.5" />
-            Resumé
+            <span className="hidden sm:inline">Resumé</span>
           </a>
           <button
             onClick={() => setMenuOpen((o) => !o)}

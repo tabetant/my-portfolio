@@ -24,8 +24,8 @@ const projects = [
   },
   {
     title: "N3XU$ Identity",
-    type: "Blockchain",
-    desc: "Blockchain-backed identity protocol enabling secure, self-sovereign digital credentials for decentralised applications.",
+    type: "AI Project",
+    desc: "Identity-based academic intelligence platform that turns grades and syllabi into actionable engineering growth metrics.",
     tags: ["TypeScript", "PostgreSQL", "Docker"],
     href: "/projects/nexus",
     gradient: "from-rose-900 via-rose-800 to-slate-900",

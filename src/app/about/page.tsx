@@ -115,6 +115,14 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <div className="text-zinc-500 text-xs font-semibold uppercase tracking-widest mb-1">
+                    Fall 2025 Sessional
+                  </div>
+                  <div className="text-zinc-900 font-bold text-xl">
+                    3.94 <span className="text-zinc-400 text-sm font-normal">/ 4.0</span>
+                  </div>
+                </div>
+                <div>
+                  <div className="text-zinc-500 text-xs font-semibold uppercase tracking-widest mb-1">
                     Honors
                   </div>
                   <div className="text-violet-600 font-bold flex items-center gap-1.5 pt-0.5">
@@ -236,6 +244,7 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
+            <div className="pointer-events-none absolute top-0 left-0 bottom-3 w-24 bg-gradient-to-r from-[#0a0a0a] to-transparent" />
             <div className="pointer-events-none absolute top-0 right-0 bottom-3 w-24 bg-gradient-to-l from-[#0a0a0a] to-transparent" />
           </div>
           <p className="text-zinc-600 text-xs mt-3 tracking-wide">scroll to explore →</p>
