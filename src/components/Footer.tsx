@@ -57,7 +57,7 @@ export default function Footer() {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com/in/antoinetabet"
+              href="https://linkedin.com/in/antoinetabetuoft"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"

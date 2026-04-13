@@ -1,5 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Check } from "lucide-react";
+import ShareButtons from "@/components/ShareButtons";
+
+export const metadata: Metadata = {
+  title: "Click-A-Mole | Antoine Tabet",
+  description: "Embedded systems project: high-performance mechatronic Whack-A-Mole with real-time FSM engine and bare-metal hardware control.",
+  openGraph: {
+    title: "Click-A-Mole | Antoine Tabet",
+    description: "C++ game engine with custom memory management, FSM architecture, and hardware-software co-design.",
+    url: "https://antoinetabet.vercel.app/projects/click-a-mole",
+  },
+};
 
 const GITHUB = "https://github.com/AG2048/click-a-mole";
 
@@ -157,6 +169,8 @@ export default function ClickAMolePage() {
                   View on GitHub →
                 </Link>
               </div>
+
+              <ShareButtons title="Click-A-Mole — embedded systems project by Antoine Tabet" />
             </div>
           </div>
         </div>

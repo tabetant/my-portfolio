@@ -1,5 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Check } from "lucide-react";
+import ShareButtons from "@/components/ShareButtons";
+
+export const metadata: Metadata = {
+  title: "Aspire Web Suite | Antoine Tabet",
+  description: "Full-stack engineering internship — optimised backend queries to cut latency by 35% and shipped 5 production apps.",
+  openGraph: {
+    title: "Aspire Web Suite | Antoine Tabet",
+    description: "Production engineering internship: 35% latency reduction, 5 full-stack apps shipped.",
+    url: "https://antoinetabet.vercel.app/projects/aspire",
+  },
+};
 
 const GITHUB = "https://github.com/tabetant/cs-ticket-system";
 
@@ -153,6 +165,8 @@ export default function AspirePage() {
                   View on GitHub →
                 </Link>
               </div>
+
+              <ShareButtons title="Aspire Web Suite — internship case study by Antoine Tabet" />
             </div>
           </div>
         </div>

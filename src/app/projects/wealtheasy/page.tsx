@@ -1,6 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Check } from "lucide-react";
 import YouTubePlayer from "@/components/YouTubePlayer";
+import ShareButtons from "@/components/ShareButtons";
+
+export const metadata: Metadata = {
+  title: "WealthEasy | Antoine Tabet",
+  description: "AI-powered financial intelligence platform that monitors client transactions, detects life events, and generates compliant advisory briefs.",
+  openGraph: {
+    title: "WealthEasy | Antoine Tabet",
+    description: "AI-powered financial intelligence platform built with Claude API, Next.js, and PostgreSQL.",
+    url: "https://antoinetabet.vercel.app/projects/wealtheasy",
+  },
+};
 
 const GITHUB = "https://github.com/mohamadmsalman82/WealthSimple-AIBuilderProject";
 const YOUTUBE_ID = "PKdqWi_MUH8";
@@ -166,6 +178,8 @@ export default function WealthEasyPage() {
                   View on GitHub →
                 </Link>
               </div>
+
+              <ShareButtons title="WealthEasy — AI financial intelligence platform by Antoine Tabet" />
             </div>
           </div>
         </div>

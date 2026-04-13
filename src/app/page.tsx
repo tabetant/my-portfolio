@@ -32,19 +32,11 @@ const projects = [
   },
   {
     title: "N3XU$ Identity",
-    desc: "Blockchain-backed identity protocol enabling secure, self-sovereign digital credentials for decentralised applications.",
+    desc: "Identity-based academic intelligence platform that turns grades and syllabi into actionable engineering growth metrics.",
     tags: ["TypeScript", "PostgreSQL", "Docker"],
     href: "/projects/nexus",
     gradient: "from-rose-900 via-rose-800 to-slate-900",
     accentColor: "group-hover:shadow-rose-900/30",
-  },
-  {
-    title: "Click-A-Mole",
-    desc: "Physical Whac-A-Mole game built with Arduino, servo motors, and computer vision for real-time mole detection and scoring.",
-    tags: ["Arduino", "C++", "Computer Vision"],
-    href: "/projects/click-a-mole",
-    gradient: "from-amber-900 via-amber-800 to-slate-900",
-    accentColor: "group-hover:shadow-amber-900/30",
   },
 ];
 
@@ -70,7 +62,7 @@ const techStack = [
   { name: "Claude API",  category: "AI / ML"    },
   { name: "Gemini AI",   category: "AI / ML"    },
   { name: "LangChain",   category: "AI / ML"    },
-  { name: "PostgreSQL",  category: "AI / ML"    },
+  { name: "PostgreSQL",  category: "Tools"      },
   { name: "Git",         category: "Tools"      },
   { name: "Docker",      category: "Tools"      },
   { name: "Vercel",      category: "Tools"      },
@@ -347,7 +339,7 @@ export default function HomePage() {
               ))}
             </div>
             {/* Fade edges to hint at scrollability */}
-            <div className="pointer-events-none absolute top-0 left-0 bottom-3 w-8 bg-gradient-to-r from-[#0a0a0a] to-transparent" />
+            <div className="pointer-events-none absolute top-0 left-0 bottom-3 w-24 bg-gradient-to-r from-[#0a0a0a] to-transparent" />
             <div className="pointer-events-none absolute top-0 right-0 bottom-3 w-24 bg-gradient-to-l from-[#0a0a0a] to-transparent" />
           </div>
           <p className="text-zinc-600 text-xs mt-4 tracking-widest uppercase flex items-center gap-1.5">
