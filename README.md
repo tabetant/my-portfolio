@@ -1,47 +1,56 @@
-# 🚀 Antoine's Digital Portfolio
+# Antoine Tabet · Portfolio
 
-Welcome to the source code of my digital home. This repository houses my personal portfolio—a reflection of my journey as a **2nd-year Computer Engineering student at the University of Toronto** and my obsession with building tools that bridge the gap between complex engineering and intuitive user experiences.
+> Source for my personal site. Project gallery, photo journal, a poetry section in three languages, and a downloadable resume. Built on Next.js 15 with Framer Motion for the page transitions.
 
-## 🛠 The Tech Stack
+[![Next.js 15](https://img.shields.io/badge/Next.js-15-000000?style=flat-square&logo=nextdotjs&logoColor=white)](https://nextjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-v3.4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![Framer Motion](https://img.shields.io/badge/Framer%20Motion-animations-0055FF?style=flat-square&logo=framer&logoColor=white)](https://www.framer.com/motion)
+[![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?style=flat-square&logo=vercel&logoColor=white)](https://vercel.com)
+![Last commit](https://img.shields.io/github/last-commit/tabetant/my-portfolio?style=flat-square)
 
-I don't just write code; I architect systems. This site is built with:
-* **Framework:** Next.js (App Router)
-* **Styling:** Tailwind CSS / SwiftUI-inspired aesthetics
-* **Database/ORM:** Supabase & Drizzle
-* **Deployment:** Vercel
+## ✨ What's on the site
+- **Project gallery.** Cards for the projects I want to surface, each linking to the live deployment or source repo.
+- **Photo journal.** Snapshots from travel and life around Toronto, with smooth page transitions.
+- **Poetry section.** Three-language poetry (English, French, Spanish) from *Heartstrings Unplayed*, formatted for reading on phone or desktop.
+- **Resume downloads.** PDFs in `resumés/`, served directly without a CMS.
+- **Vercel Analytics.** Lightweight visitor stats, no third-party trackers.
 
----
+## 🛠 Stack
+- Next.js 15 (App Router, Turbopack), React 19, TypeScript
+- Tailwind CSS v3.4
+- Framer Motion for transitions and micro-interactions
+- Radix Slot primitive, Lucide icons
+- Vercel Analytics, deployed on Vercel
 
-## 🏗 Featured Projects
+## 🚀 Run it locally
 
-| Project | Description | Tech Used |
-| :--- | :--- | :--- |
-| **WorldEd** | An interactive platform featuring **Eddi**, an autonomous AI agent capable of assisting users through dynamic interactions and real-time debugging. | Next.js, AI Agents, LLMs |
-| **Nexus** | An AI-powered tool for students to perform semantic searches on their academic materials, simplifying study workflows. | Python, Next.js, Supabase |
-| **EZGL Map** | A high-performance GIS software visualizing Toronto, featuring custom graphics and optimized data structures. | C++, EZGL |
-| **Click A Mole** | A playful Pokémon-themed "Whac-A-Mole" game where players target Diglett to test their reflexes. | JavaScript / Web Tech |
+```bash
+git clone https://github.com/tabetant/my-portfolio.git
+cd my-portfolio
+npm install
+npm run dev
+```
 
----
+Then open `http://localhost:3000`.
 
-## 🎨 Beyond the Code
-Engineering is my discipline, but creativity is my fuel. My portfolio highlights:
-* **Heartstrings Unplayed:** My upcoming trilingual poetry collection (English, French, Spanish) exploring themes of connection and self-expression.
-* **Leadership:** My journey with **Scouts du Liban**, HMUN 2024 advising, and serving as a summer camp counselor.
-* **Music:** When I’m not debugging Assembly on a **DE1-SoC**, I’m likely singing or playing guitar and piano.
+## 📁 Folder layout
 
-## 📈 Current Focus
-* **Education:** University of Toronto, Computer Engineering (Class of 2027).
-* **Technical:** Implementing low-level interrupts and audio core functionality for hardware-software integration.
-* **Professional:** Crafting a narrative that shows I'm more than just a coder.
+```
+src/app/         # App Router pages (home, projects, photos, poetry, resume)
+src/components/  # Shared UI components
+src/lib/         # Helpers (formatters, content loaders)
+photos/          # Photo journal images
+poetry/          # Poetry content
+resumés/         # PDF resume downloads
+Media/           # Misc media assets
+```
 
----
+## 🌐 Live site
 
-## 🤝 Connect with Me
-I’m always down to talk about Pokémon, Amex Cobalt travel hacks, or the nuances of semantic search.
+[antoinetabet.vercel.app](https://antoinetabet.vercel.app)
 
-* **University:** University of Toronto (Skule™)
-* **LinkedIn:** [Insert your Link]
-* **Portfolio:** [Insert your deployed URL]
+## 👤 Author
 
----
-*Built with ❤️ and a lot of coffee in Toronto.*
+**Antoine Tabet**, UofT Computer Engineering
+[LinkedIn](https://linkedin.com/in/antoinetabetuoft) · [antoine.tabet@mail.utoronto.ca](mailto:antoine.tabet@mail.utoronto.ca) · [GitHub](https://github.com/tabetant)
