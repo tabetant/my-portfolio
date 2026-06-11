@@ -6,12 +6,13 @@ import { usePathname } from "next/navigation";
 import { Menu, X, Download } from "lucide-react";
 
 const NAV_LINKS = [
-  { href: "/",          label: "Home"     },
-  { href: "/#projects", label: "Projects" },
-  { href: "/about",     label: "About"    },
-  { href: "/stack",     label: "Stack"    },
-  { href: "/poetry",    label: "Poetry"   },
-  { href: "/contact",   label: "Contact"  },
+  { href: "/",           label: "Home"       },
+  { href: "/#projects",  label: "Projects"   },
+  { href: "/consulting", label: "Consulting" },
+  { href: "/about",      label: "About"      },
+  { href: "/stack",      label: "Stack"      },
+  { href: "/poetry",     label: "Poetry"     },
+  { href: "/contact",    label: "Contact"    },
 ];
 
 function isActive(href: string, pathname: string): boolean {
