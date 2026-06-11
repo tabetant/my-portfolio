@@ -9,11 +9,19 @@ import AnimatedSection from "@/components/AnimatedSection";
 const stats = [
   { num: "3.83", label: "Cumulative GPA" },
   { num: "35%", label: "Latency Reduced @ Aspire" },
-  { num: "5+", label: "Projects Shipped" },
+  { num: "19", label: "Courses in Production" },
   { num: "8 yrs", label: "Leadership (Scouts du Liban)" },
 ];
 
 const projects = [
+  {
+    title: "AskAlan",
+    desc: "Production retrieval-augmented AI assistant serving University of Toronto students across 19 courses. Led a zero-downtime migration of its search layer onto Postgres and cut retrieval latency ~40%.",
+    tags: ["Anthropic Claude", "FastAPI", "PostgreSQL"],
+    href: "/projects/askalan",
+    gradient: "from-emerald-900 via-emerald-800 to-slate-900",
+    accentColor: "group-hover:shadow-emerald-900/30",
+  },
   {
     title: "WealthEasy",
     desc: "AI-powered personal finance assistant that parses bank statements and generates natural language insights using the Claude API.",

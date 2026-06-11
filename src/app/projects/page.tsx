@@ -5,6 +5,15 @@ import Footer from "@/components/Footer";
 
 const projects = [
   {
+    title: "AskAlan",
+    type: "AI Project",
+    desc: "Production retrieval-augmented AI assistant serving University of Toronto students across 19 courses. Led a zero-downtime migration of its search layer onto Postgres and cut retrieval latency ~40%.",
+    tags: ["Anthropic Claude", "FastAPI", "PostgreSQL"],
+    href: "/projects/askalan",
+    gradient: "from-emerald-900 via-emerald-800 to-slate-900",
+    glow: "group-hover:shadow-emerald-900/30",
+  },
+  {
     title: "WealthEasy",
     type: "AI Project",
     desc: "AI-powered personal finance assistant that parses bank statements and generates natural language insights using the Claude API.",
