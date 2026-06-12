@@ -1,5 +1,16 @@
+import type { Metadata } from "next";
 import Image from "next/image";
-import { GraduationCap, Briefcase, Award, MapPin } from "lucide-react";
+import AnimatedSection from "@/components/AnimatedSection";
+
+export const metadata: Metadata = {
+  title: "About | Antoine Tabet",
+  description: "The story behind the work: Computer Engineering at the University of Toronto, Dean's List, eight years of scout leadership, and engineering shaped by Beirut and Toronto.",
+  openGraph: {
+    title: "About | Antoine Tabet",
+    description: "Computer Engineering at UofT, Dean's List, and eight years of leadership.",
+    url: "https://antoinetabet.com/about",
+  },
+};
 
 const photos = [
   { src: "/images/about-me/me_playing_guitar.jpeg", caption: "Guitar" },
@@ -13,26 +24,24 @@ const photos = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
-      {/* ═══════════════════════════════════════════
-          HERO BAND
-      ═══════════════════════════════════════════ */}
-      <section className="bg-zinc-950 py-20">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
+    <div className="min-h-screen bg-[#0a0a0a]">
+      {/* ── HERO ── */}
+      <section className="bg-zinc-950 pt-16 pb-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-12">
             <div>
-              <p className="text-violet-400 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
-                — Background
+              <p className="font-mono text-violet-400 text-xs uppercase tracking-[0.3em] mb-6">
+                Background
               </p>
-              <h1 className="text-white text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-4">
+              <h1 className="text-white font-bold tracking-tighter leading-[0.95] text-[clamp(3rem,10vw,8rem)] mb-8">
                 My Story
               </h1>
               <p className="text-zinc-400 text-xl max-w-2xl leading-relaxed">
-                A timeline of professional experience, academic achievements, and leadership roles
-                that have shaped who I am as an engineer.
+                A timeline of professional experience, academic achievements, and leadership
+                roles that have shaped who I am as an engineer.
               </p>
             </div>
-            <div className="relative flex-shrink-0 w-48 h-48 lg:w-56 lg:h-56 rounded-2xl overflow-hidden ring-2 ring-violet-600/40 rotate-2 shadow-xl shadow-violet-900/20">
+            <div className="relative flex-shrink-0 w-48 h-48 lg:w-56 lg:h-56 rounded-2xl overflow-hidden ring-1 ring-zinc-800 rotate-2">
               <Image
                 src="/images/about-me/my_aesthetic.jpeg"
                 alt="Antoine Tabet"
@@ -45,201 +54,235 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          TIMELINE — white bg
-      ═══════════════════════════════════════════ */}
-      <section className="bg-white py-16">
-        <div className="max-w-5xl mx-auto px-6 flex flex-col gap-12">
+      {/* ── EXPERIENCE ── */}
+      <section className="py-20 border-t border-zinc-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <AnimatedSection>
+            <p className="font-mono text-violet-400 text-xs uppercase tracking-[0.3em] mb-10">
+              01 / Experience
+            </p>
+          </AnimatedSection>
 
-          {/* Work Experience */}
-          <div>
-            <div className="flex items-center gap-3 mb-8 pb-4 border-b border-zinc-200">
-              <div className="w-9 h-9 rounded-lg bg-violet-100 flex items-center justify-center">
-                <Briefcase className="w-5 h-5 text-violet-600" />
+          <AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 border-t border-zinc-800 pt-8">
+              <div className="md:col-span-4">
+                <p className="font-mono text-zinc-500 text-xs uppercase tracking-[0.18em] mb-2">
+                  May 2025 — Aug 2025
+                </p>
+                <p className="font-mono text-zinc-600 text-xs uppercase tracking-[0.18em]">
+                  Aspire · Beirut, Lebanon
+                </p>
               </div>
-              <h2 className="text-zinc-900 text-2xl font-bold">Work Experience</h2>
-            </div>
-
-            <div className="border-l-4 border-violet-600 pl-8 flex flex-col gap-2">
-              <div className="flex justify-between items-start flex-wrap gap-2">
-                <h3 className="text-zinc-900 text-lg font-bold">Software Engineering Intern</h3>
-                <span className="text-zinc-400 text-sm shrink-0">May 2024 – Aug 2024</span>
-              </div>
-              <div className="flex items-center gap-2 text-violet-600 font-medium text-sm mb-3">
-                <span>Aspire</span>
-                <span className="text-zinc-300">•</span>
-                <span className="flex items-center gap-1 text-zinc-500">
-                  <MapPin className="w-3 h-3" /> Beirut, Lebanon
-                </span>
-              </div>
-              <ul className="text-zinc-600 space-y-2 text-[15px] leading-relaxed list-disc list-inside">
-                <li>Optimized backend queries and database interactions, slicing response latency by <strong className="text-zinc-900">35%</strong>.</li>
-                <li>Contributed to designing and implementing scalable backend architectures for enterprise applications.</li>
-                <li>Collaborated in an agile team environment to push features from development to production.</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Education */}
-          <div>
-            <div className="flex items-center gap-3 mb-8 pb-4 border-b border-zinc-200">
-              <div className="w-9 h-9 rounded-lg bg-violet-100 flex items-center justify-center">
-                <GraduationCap className="w-5 h-5 text-violet-600" />
-              </div>
-              <h2 className="text-zinc-900 text-2xl font-bold">Education</h2>
-            </div>
-
-            <div className="border-l-4 border-violet-600 pl-8 flex flex-col gap-2">
-              <div className="flex justify-between items-start flex-wrap gap-2">
-                <h3 className="text-zinc-900 text-lg font-bold">
-                  Bachelor of Applied Science, Computer Engineering
-                </h3>
-                <span className="text-zinc-400 text-sm shrink-0">Sep 2023 – Expected 2027</span>
-              </div>
-              <div className="flex items-center gap-2 text-violet-600 font-medium text-sm mb-4">
-                <span>University of Toronto</span>
-                <span className="text-zinc-300">•</span>
-                <span className="flex items-center gap-1 text-zinc-500">
-                  <MapPin className="w-3 h-3" /> Toronto, ON
-                </span>
-              </div>
-
-              <div className="bg-zinc-50 border border-zinc-200 rounded-xl p-5 mb-4 inline-flex gap-10">
-                <div>
-                  <div className="text-zinc-500 text-xs font-semibold uppercase tracking-widest mb-1">
-                    Cumulative GPA
-                  </div>
-                  <div className="text-zinc-900 font-bold text-xl">
-                    3.83 <span className="text-zinc-400 text-sm font-normal">/ 4.0</span>
-                  </div>
-                </div>
-                <div>
-                  <div className="text-zinc-500 text-xs font-semibold uppercase tracking-widest mb-1">
-                    Fall 2025 Sessional
-                  </div>
-                  <div className="text-zinc-900 font-bold text-xl">
-                    3.94 <span className="text-zinc-400 text-sm font-normal">/ 4.0</span>
-                  </div>
-                </div>
-                <div>
-                  <div className="text-zinc-500 text-xs font-semibold uppercase tracking-widest mb-1">
-                    Honors
-                  </div>
-                  <div className="text-violet-600 font-bold flex items-center gap-1.5 pt-0.5">
-                    <Award className="w-4 h-4" /> Dean&apos;s List Scholar
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-zinc-600 text-[15px] leading-relaxed">
-                Focusing on AI, Software Systems, and Distributed Computing. Coursework includes
-                Data Structures &amp; Algorithms, Digital Systems, Operating Systems, and
-                Advanced Software Engineering.
-              </p>
-            </div>
-          </div>
-
-          {/* Leadership */}
-          <div>
-            <div className="flex items-center gap-3 mb-8 pb-4 border-b border-zinc-200">
-              <div className="w-9 h-9 rounded-lg bg-violet-100 flex items-center justify-center">
-                <Award className="w-5 h-5 text-violet-600" />
-              </div>
-              <h2 className="text-zinc-900 text-2xl font-bold">Leadership &amp; Activities</h2>
-            </div>
-
-            <div className="flex flex-col gap-10">
-              {/* Harvard MUN */}
-              <div className="border-l-4 border-violet-600 pl-8">
-                <div className="flex flex-col sm:flex-row sm:items-start gap-6">
-                  <div className="flex-1">
-                    <div className="flex justify-between items-start flex-wrap gap-2">
-                      <h3 className="text-zinc-900 text-lg font-bold">Advisor &amp; Delegate</h3>
-                      <span className="text-zinc-400 text-sm shrink-0">Jan 2024</span>
-                    </div>
-                    <div className="text-violet-600 font-medium text-sm mb-3">
-                      Harvard Model United Nations
-                    </div>
-                    <p className="text-zinc-600 text-[15px] leading-relaxed">
-                      Honed diplomacy, strategy, and negotiation skills on an international stage,
-                      representing complex geopolitical stances and drafting joint resolutions.
-                    </p>
-                  </div>
-                  <div className="relative w-full sm:w-48 h-36 rounded-xl overflow-hidden flex-shrink-0 ring-1 ring-zinc-200">
-                    <Image
-                      src="/images/about-me/HMUN_2024_Advisor.jpg"
-                      alt="Harvard Model United Nations 2024"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 100vw, 192px"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Scouts du Liban */}
-              <div className="border-l-4 border-violet-600 pl-8">
-                <div className="flex flex-col sm:flex-row sm:items-start gap-6">
-                  <div className="flex-1">
-                    <div className="flex justify-between items-start flex-wrap gap-2">
-                      <h3 className="text-zinc-900 text-lg font-bold">Camp Counselor &amp; Leader</h3>
-                      <span className="text-zinc-400 text-sm shrink-0">8 Years</span>
-                    </div>
-                    <div className="text-violet-600 font-medium text-sm mb-3">
-                      Les Scouts du Liban
-                    </div>
-                    <p className="text-zinc-600 text-[15px] leading-relaxed">
-                      Dedicated 8 years to leading teams of young scouts, organizing camps, managing
-                      complex logistics, and developing communication and leadership skills in
-                      high-pressure outdoor environments.
-                    </p>
-                  </div>
-                  <div className="relative w-full sm:w-48 h-36 rounded-xl overflow-hidden flex-shrink-0 ring-1 ring-zinc-200">
-                    <Image
-                      src="/images/about-me/scouts_du_liban.jpg"
-                      alt="Les Scouts du Liban"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 100vw, 192px"
-                    />
-                  </div>
-                </div>
+              <div className="md:col-span-8">
+                <h2 className="text-white text-2xl md:text-3xl font-bold tracking-tight mb-5">
+                  Software Engineering Intern
+                </h2>
+                <ul className="text-zinc-400 space-y-3 leading-relaxed">
+                  <li className="flex gap-4">
+                    <span className="text-violet-400 font-mono text-sm shrink-0 pt-0.5">→</span>
+                    Optimized backend queries and database interactions, slicing response
+                    latency by <strong className="text-white font-semibold">&nbsp;35%</strong>.
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="text-violet-400 font-mono text-sm shrink-0 pt-0.5">→</span>
+                    Contributed to designing and implementing scalable backend architectures
+                    for enterprise applications.
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="text-violet-400 font-mono text-sm shrink-0 pt-0.5">→</span>
+                    Shipped 5 production full-stack applications (Next.js + Supabase)
+                    delivering 10+ features, with RESTful APIs serving 1,000+ daily requests.
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="text-violet-400 font-mono text-sm shrink-0 pt-0.5">→</span>
+                    Hardened security with row-level security and JWT auth middleware, at 95%
+                    unit test coverage.
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
-
+          </AnimatedSection>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          PERSONAL PHOTO STRIP
-      ═══════════════════════════════════════════ */}
-      <section className="bg-[#0a0a0a] py-24">
-        <div className="max-w-5xl mx-auto px-6">
-          <p className="text-violet-400 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
-            — Beyond the Code
-          </p>
-          <h2 className="text-white text-4xl font-bold tracking-tight mb-10">
-            When I&apos;m Not Building
-          </h2>
+      {/* ── EDUCATION ── */}
+      <section className="py-20 border-t border-zinc-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <AnimatedSection>
+            <p className="font-mono text-violet-400 text-xs uppercase tracking-[0.3em] mb-10">
+              02 / Education
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 border-t border-zinc-800 pt-8">
+              <div className="md:col-span-4">
+                <p className="font-mono text-zinc-500 text-xs uppercase tracking-[0.18em] mb-2">
+                  Aug 2024 — May 2029
+                </p>
+                <p className="font-mono text-zinc-600 text-xs uppercase tracking-[0.18em]">
+                  University of Toronto · Toronto, ON
+                </p>
+              </div>
+              <div className="md:col-span-8">
+                <h2 className="text-white text-2xl md:text-3xl font-bold tracking-tight mb-6">
+                  BASc, Electrical &amp; Computer Engineering
+                  <span className="block text-zinc-400 text-lg font-medium mt-1">
+                    Minor in Business &amp; AI
+                  </span>
+                </h2>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-zinc-800 border border-zinc-800 rounded-xl overflow-hidden mb-6">
+                  <div className="bg-[#0a0a0a] p-5">
+                    <p className="font-mono text-zinc-500 text-[11px] uppercase tracking-[0.14em] mb-2">
+                      Cumulative GPA
+                    </p>
+                    <p className="text-white font-bold text-2xl tracking-tight">
+                      3.83 <span className="text-zinc-500 text-sm font-normal">/ 4.0</span>
+                    </p>
+                  </div>
+                  <div className="bg-[#0a0a0a] p-5">
+                    <p className="font-mono text-zinc-500 text-[11px] uppercase tracking-[0.14em] mb-2">
+                      Fall 2025 Sessional
+                    </p>
+                    <p className="text-white font-bold text-2xl tracking-tight">
+                      3.94 <span className="text-zinc-500 text-sm font-normal">/ 4.0</span>
+                    </p>
+                  </div>
+                  <div className="bg-[#0a0a0a] p-5">
+                    <p className="font-mono text-zinc-500 text-[11px] uppercase tracking-[0.14em] mb-2">
+                      Honors
+                    </p>
+                    <p className="text-violet-400 font-bold text-lg tracking-tight pt-1">
+                      Dean&apos;s List Scholar
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-zinc-400 leading-relaxed">
+                  Dean&apos;s List 2024–2025 and Fall 2025. Coursework includes Machine
+                  Learning, Data Structures &amp; Algorithms, Software Engineering, Digital
+                  Systems, and Object-Oriented Programming.
+                </p>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ── LEADERSHIP ── */}
+      <section className="py-20 border-t border-zinc-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <AnimatedSection>
+            <p className="font-mono text-violet-400 text-xs uppercase tracking-[0.3em] mb-10">
+              03 / Leadership
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 border-t border-zinc-800 pt-8 pb-12">
+              <div className="md:col-span-4">
+                <p className="font-mono text-zinc-500 text-xs uppercase tracking-[0.18em] mb-2">
+                  Jan 2023 · Diplomatic Commendation
+                </p>
+                <p className="font-mono text-zinc-600 text-xs uppercase tracking-[0.18em]">
+                  Harvard Model United Nations
+                </p>
+              </div>
+              <div className="md:col-span-5">
+                <h2 className="text-white text-2xl md:text-3xl font-bold tracking-tight mb-4">
+                  Advisor &amp; Delegate
+                </h2>
+                <p className="text-zinc-400 leading-relaxed">
+                  Earned a Diplomatic Commendation representing Denmark among 300+
+                  international delegates — co-authored and passed 3 resolutions through
+                  structured negotiation and written advocacy.
+                </p>
+              </div>
+              <div className="md:col-span-3">
+                <div className="relative w-full h-36 rounded-xl overflow-hidden ring-1 ring-zinc-800">
+                  <Image
+                    src="/images/about-me/HMUN_2024_Advisor.jpg"
+                    alt="Harvard Model United Nations 2024"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 280px"
+                  />
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 border-t border-zinc-800 pt-8">
+              <div className="md:col-span-4">
+                <p className="font-mono text-zinc-500 text-xs uppercase tracking-[0.18em] mb-2">
+                  8 Years
+                </p>
+                <p className="font-mono text-zinc-600 text-xs uppercase tracking-[0.18em]">
+                  Les Scouts du Liban
+                </p>
+              </div>
+              <div className="md:col-span-5">
+                <h2 className="text-white text-2xl md:text-3xl font-bold tracking-tight mb-4">
+                  Camp Counselor &amp; Leader
+                </h2>
+                <p className="text-zinc-400 leading-relaxed">
+                  Elected troop leader for 9 scouts — led meetings, organized camps, and
+                  trained youth on outdoor technical skills across 8 years, logging 80+ hours
+                  of community service through food drives, beach clean-ups, and youth
+                  education programs.
+                </p>
+              </div>
+              <div className="md:col-span-3">
+                <div className="relative w-full h-36 rounded-xl overflow-hidden ring-1 ring-zinc-800">
+                  <Image
+                    src="/images/about-me/scouts_du_liban.jpg"
+                    alt="Les Scouts du Liban"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 280px"
+                  />
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ── PHOTO REEL ── */}
+      <section className="py-24 border-t border-zinc-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <AnimatedSection>
+            <p className="font-mono text-violet-400 text-xs uppercase tracking-[0.3em] mb-4">
+              04 / Beyond the Code
+            </p>
+            <h2 className="text-white text-[clamp(2.4rem,5vw,4rem)] font-bold tracking-tight leading-none mb-12">
+              When I&apos;m Not Building
+            </h2>
+          </AnimatedSection>
 
           <div className="relative">
             <div className="flex gap-5 overflow-x-auto pb-3 scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-              {photos.map((photo) => (
+              {photos.map((photo, i) => (
                 <div
                   key={photo.src}
-                  className="relative flex-shrink-0 w-64 rounded-xl overflow-hidden"
-                  style={{ height: 280 }}
+                  className={`relative flex-shrink-0 w-64 rounded-xl overflow-hidden group ${
+                    i % 2 === 0 ? "rotate-1" : "-rotate-1"
+                  } hover:rotate-0 transition-transform duration-300`}
+                  style={{ height: 300 }}
                 >
                   <Image
                     src={photo.src}
                     alt={photo.caption}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                     sizes="256px"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-4 pb-4 pt-10">
-                    <p className="text-zinc-200 text-sm font-medium">{photo.caption}</p>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-4 pt-10">
+                    <p className="font-mono text-zinc-300 text-xs uppercase tracking-[0.14em]">
+                      <span className="text-violet-400">0{i + 1}</span> — {photo.caption}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -247,7 +290,9 @@ export default function AboutPage() {
             <div className="pointer-events-none absolute top-0 left-0 bottom-3 w-24 bg-gradient-to-r from-[#0a0a0a] to-transparent" />
             <div className="pointer-events-none absolute top-0 right-0 bottom-3 w-24 bg-gradient-to-l from-[#0a0a0a] to-transparent" />
           </div>
-          <p className="text-zinc-600 text-xs mt-3 tracking-wide">scroll to explore →</p>
+          <p className="font-mono text-zinc-600 text-[11px] mt-5 tracking-[0.3em] uppercase">
+            Scroll →
+          </p>
         </div>
       </section>
     </div>

@@ -14,8 +14,15 @@ body {
   overflow-x: hidden;
 }
 
+::selection {
+  background: #7c3aed;
+  color: #ffffff;
+}
+
+/* Smooth scrolling is handled by Lenis (SmoothScroll.tsx); CSS smooth
+   scrolling must stay off or the two animate against each other. */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 /* ─── Scrollbar ──────────────────────────────────────────────────────────── */
@@ -56,16 +63,279 @@ html {
   transform: translateY(0);
 }
 
+/* ─── Native scroll-driven upgrades (Chromium 115+, Safari 26+) ─────────────
+   Firefox still flags animation-timeline, so the IntersectionObserver
+   .reveal/.visible path above remains the fallback. */
+@supports (animation-timeline: view()) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    animation: scroll-reveal both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 55%;
+  }
+
+  .hero-parallax {
+    animation: hero-drift linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100vh;
+  }
+}
+
+@keyframes scroll-reveal {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hero-drift {
+  to { transform: translateY(-64px); opacity: 0.1; }
+}
+
+/* ─── Editorial utilities ────────────────────────────────────────────────── */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(228, 228, 231, 0.45);
+}
+
+/* Touch devices have no hover: interactive ghost titles render solid.
+   .text-outline-static (decorative marquee) keeps the outline everywhere. */
+@media (hover: none) {
+  .text-outline:not(.text-outline-static) {
+    color: #f4f4f5;
+    -webkit-text-stroke: 0;
+  }
+}
+
+.project-row::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(124, 58, 237, 0.07), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+.project-row:hover::before { opacity: 1; }
+
+/* Masked line reveals — text rises out of an overflow-hidden line box.
+   The padding/margin pair keeps descenders (g, y, p) from being clipped. */
+.mask-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+.mask-line-inner {
+  display: block;
+  transform: translateY(110%);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible .mask-line-inner {
+  transform: translateY(0);
+}
+
+/* Hero headline — staggered masked line entrance */
+.hero-line {
+  animation: heroLineUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes heroLineUp {
+  from { transform: translateY(110%); }
+  to   { transform: translateY(0); }
+}
+.mask-line:nth-child(1) .hero-line { animation-delay: 0.15s; }
+.mask-line:nth-child(2) .hero-line { animation-delay: 0.28s; }
+.mask-line:nth-child(3) .hero-line { animation-delay: 0.41s; }
+
+/* Overlay menu items */
+.menu-item {
+  animation: fadeInUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Marquee strips */
+@keyframes marquee-scroll {
+  to { transform: translateX(-50%); }
+}
+.marquee { overflow: hidden; }
+.marquee-track { animation: marquee-scroll 30s linear infinite; }
+.marquee-reverse { animation-direction: reverse; }
+
+/* Skip link — hidden until keyboard focus */
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 1rem;
+  z-index: 100;
+  background: #7c3aed;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 9999px;
+  transition: top 0.2s ease;
+}
+.skip-link:focus-visible {
+  top: 1rem;
+}
+
+/* ─── View Transitions (next-view-transitions → document.startViewTransition)
+   Old page lifts away, new page rises in. The navbar gets its own
+   view-transition-name so it stays fixed while pages swap beneath it.
+   Browsers without the API (Firefox) fall back to instant navigation. */
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root) {
+    animation: vt-out 0.25s ease both;
+  }
+  ::view-transition-new(root) {
+    animation: vt-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+@keyframes vt-out {
+  to { opacity: 0; transform: translateY(-10px); }
+}
+@keyframes vt-in {
+  from { opacity: 0; transform: translateY(14px); }
+}
+.site-nav {
+  view-transition-name: site-nav;
+}
+
+/* Reading progress bar (case studies) — scroll-driven, zero JS */
+@supports (animation-timeline: scroll()) {
+  .reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #7c3aed;
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    z-index: 60;
+    animation: progress-grow linear both;
+    animation-timeline: scroll();
+  }
+}
+@keyframes progress-grow {
+  to { transform: scaleX(1); }
+}
+
+/* Custom cursor (pointer: fine only — mounted conditionally in JS too) */
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  pointer-events: none;
+  border-radius: 9999px;
+  will-change: transform;
+}
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #a78bfa;
+  margin: -4px 0 0 -4px;
+}
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  margin: -18px 0 0 -18px;
+  border: 1px solid rgba(167, 139, 250, 0.45);
+  transition: width 0.25s ease, height 0.25s ease, margin 0.25s ease,
+    background-color 0.25s ease;
+}
+.cursor-ring.is-active {
+  width: 56px;
+  height: 56px;
+  margin: -28px 0 0 -28px;
+  background: rgba(124, 58, 237, 0.12);
+}
+
+/* Lenis smooth scroll compatibility */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Project-row hover preview chip */
+.row-preview {
+  position: absolute;
+  top: 50%;
+  left: var(--preview-x, 50%);
+  width: 220px;
+  height: 140px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.9) rotate(-3deg);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 5;
+}
+.project-row:hover .row-preview {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1) rotate(-3deg);
+}
+
+/* Film grain */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+}
+
+/* ─── Hero ambient glow (WebGL fallback + backdrop) ─────────────────────── */
+.hero-glow {
+  background:
+    radial-gradient(55% 50% at 68% 38%, rgba(124, 58, 237, 0.22), transparent 70%),
+    radial-gradient(40% 45% at 28% 72%, rgba(139, 92, 246, 0.12), transparent 70%),
+    radial-gradient(30% 30% at 82% 78%, rgba(167, 139, 250, 0.08), transparent 70%);
+}
+
 /* ─── Reduced motion ─────────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  .hero-badge, .hero-title, .hero-subtitle, .hero-ctas, .hero-stats {
+  .hero-badge, .hero-title, .hero-subtitle, .hero-ctas, .hero-stats,
+  .hero-line, .menu-item {
     animation: none;
     opacity: 1;
+  }
+  .marquee-track {
+    animation: none;
   }
   .reveal {
     opacity: 1;
     transform: none;
     transition: none;
+    animation: none;
+  }
+  .hero-parallax,
+  .hero-line {
+    animation: none;
+  }
+  .mask-line-inner {
+    transform: none;
+    transition: none;
+  }
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
   }
   html { scroll-behavior: auto; }
 }
