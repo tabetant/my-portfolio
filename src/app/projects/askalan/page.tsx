@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AskAlan | Antoine Tabet",
     description: "Production retrieval-augmented AI assistant serving University of Toronto engineering students, re-architected for scale across a multi-database backend.",
-    url: "https://antoinetabet.vercel.app/projects/askalan",
+    url: "https://antoinetabet.com/projects/askalan",
   },
 };
 

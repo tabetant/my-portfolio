@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Aspire Web Suite | Antoine Tabet",
     description: "Production engineering internship: 35% latency reduction, 5 full-stack apps shipped.",
-    url: "https://antoinetabet.vercel.app/projects/aspire",
+    url: "https://antoinetabet.com/projects/aspire",
   },
 };
 

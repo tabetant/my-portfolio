@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "WealthEasy | Antoine Tabet",
     description: "AI-powered financial intelligence platform built with Claude API, Next.js, and PostgreSQL.",
-    url: "https://antoinetabet.vercel.app/projects/wealtheasy",
+    url: "https://antoinetabet.com/projects/wealtheasy",
   },
 };
 

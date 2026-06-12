@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "AI Consulting | Antoine Tabet",
     description:
       "Consulting work delivered for small operations heavy businesses: workflow automation, reporting clarity, and AI tools built on the Claude API.",
-    url: "https://antoinetabet.vercel.app/consulting",
+    url: "https://antoinetabet.com/consulting",
   },
 };
 

@@ -13,7 +13,7 @@ const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Antoine Tabet",
-  url: "https://antoinetabet.vercel.app",
+  url: "https://antoinetabet.com",
   email: "mailto:antoine.tabet@mail.utoronto.ca",
   jobTitle: "Computer Engineering Student & AI Engineer",
   affiliation: {
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "Antoine Tabet | AI Engineer & Founder",
     description:
       "ECE @ University of Toronto. Dean's List. 3.83 cumulative GPA. I build AI systems that ship to production.",
-    url: "https://antoinetabet.vercel.app",
+    url: "https://antoinetabet.com",
     siteName: "Antoine Tabet",
     locale: "en_US",
     type: "website",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     description:
       "ECE @ University of Toronto. Dean's List. 3.83 cumulative GPA. I build AI systems that ship to production.",
   },
-  metadataBase: new URL("https://antoinetabet.vercel.app"),
+  metadataBase: new URL("https://antoinetabet.com"),
 };
 
 export default function RootLayout({

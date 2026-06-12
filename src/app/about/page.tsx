@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About | Antoine Tabet",
     description: "Computer Engineering at UofT, Dean's List, and eight years of leadership.",
-    url: "https://antoinetabet.vercel.app/about",
+    url: "https://antoinetabet.com/about",
   },
 };
 

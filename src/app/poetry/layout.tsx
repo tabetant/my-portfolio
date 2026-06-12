@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Poetry | Antoine Tabet",
     description: "Heartstrings Unplayed — a trilingual poetry collection.",
-    url: "https://antoinetabet.vercel.app/poetry",
+    url: "https://antoinetabet.com/poetry",
   },
 };
 

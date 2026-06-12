@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "N3XU$ Identity Protocol | Antoine Tabet",
     description: "AI-native academic telemetry dashboard with neural audit engine and resonance monitoring.",
-    url: "https://antoinetabet.vercel.app/projects/nexus",
+    url: "https://antoinetabet.com/projects/nexus",
   },
 };
 

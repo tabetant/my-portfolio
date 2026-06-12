@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Click-A-Mole | Antoine Tabet",
     description: "C++ game engine with custom memory management, FSM architecture, and hardware-software co-design.",
-    url: "https://antoinetabet.vercel.app/projects/click-a-mole",
+    url: "https://antoinetabet.com/projects/click-a-mole",
   },
 };
 

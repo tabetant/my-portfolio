@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "WorldEd | Antoine Tabet",
     description: "AI-powered adaptive learning platform with Socratic tutor, RAG pipeline, and gamified learning.",
-    url: "https://antoinetabet.vercel.app/projects/worlded",
+    url: "https://antoinetabet.com/projects/worlded",
   },
 };
 

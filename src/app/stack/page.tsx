@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Stack | Antoine Tabet",
     description: "The tools and technologies behind Antoine's AI systems and full-stack applications.",
-    url: "https://antoinetabet.vercel.app/stack",
+    url: "https://antoinetabet.com/stack",
   },
 };
 

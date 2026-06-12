@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Work | Antoine Tabet",
     description: "Production AI systems, full-stack apps, and hardware builds.",
-    url: "https://antoinetabet.vercel.app/projects",
+    url: "https://antoinetabet.com/projects",
   },
 };
 import Footer from "@/components/Footer";
