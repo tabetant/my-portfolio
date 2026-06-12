@@ -1,50 +1,52 @@
-import { Github, Linkedin, Instagram } from "lucide-react";
+import { Github, Linkedin, Instagram, ArrowUpRight } from "lucide-react";
+import AnimatedSection from "@/components/AnimatedSection";
+import LocalTime from "@/components/LocalTime";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a0a0a]">
-      {/* Contact CTA */}
-      <div className="relative py-28 px-6 text-center overflow-hidden">
-        {/* Radial violet glow */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(109,40,217,0.10) 0%, transparent 70%)",
-          }}
-        />
-        {/* Subtle dot grid */}
-        <div
-          className="absolute inset-0 opacity-[0.035] pointer-events-none"
-          style={{
-            backgroundImage: "radial-gradient(circle, #a78bfa 1px, transparent 1px)",
-            backgroundSize: "32px 32px",
-          }}
-        />
+    <footer className="bg-[#0a0a0a] border-t border-zinc-900 relative overflow-hidden">
+      {/* Radial violet glow */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 60% at 50% 80%, rgba(109,40,217,0.12) 0%, transparent 70%)",
+        }}
+      />
 
-        <div className="relative z-10">
-          <p className="text-violet-400 text-sm font-semibold uppercase tracking-widest mb-5">
-            Get In Touch
-          </p>
-          <h2 className="text-white text-4xl md:text-5xl font-bold tracking-tight mb-5">
-            Let&apos;s Build Something Together.
-          </h2>
-          <p className="text-zinc-400 text-lg mb-10 max-w-lg mx-auto leading-relaxed">
-            Open to internships, new grad roles, and research opportunities.
-          </p>
-          <a
-            href="mailto:antoine.tabet@mail.utoronto.ca"
-            className="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-500 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-200 hover:shadow-xl hover:shadow-violet-600/25 hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-          >
-            Say Hello →
-          </a>
-        </div>
-      </div>
+      {/* Contact finale */}
+      <AnimatedSection className="relative z-10 max-w-7xl mx-auto px-6 pt-28 pb-20">
+        <p className="font-mono text-violet-400 text-xs uppercase tracking-[0.3em] mb-10">
+          05 / Contact
+        </p>
+        <h2 className="text-white text-[clamp(2.6rem,7vw,6rem)] font-bold tracking-tighter leading-[0.95] mb-4">
+          <span className="mask-line">
+            <span className="mask-line-inner">Let&apos;s build</span>
+          </span>
+          <span className="mask-line">
+            <span className="mask-line-inner text-violet-400">something.</span>
+          </span>
+        </h2>
+        <p className="font-mono text-zinc-500 text-sm uppercase tracking-[0.18em] mb-12">
+          Open to internships · New grad roles · Research
+        </p>
+        <a
+          href="mailto:antoine.tabet@mail.utoronto.ca"
+          className="group inline-flex flex-wrap items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded-sm"
+        >
+          <span className="text-outline group-hover:text-white text-[clamp(1.1rem,3.4vw,2.8rem)] font-bold tracking-tight transition-colors duration-300 break-all">
+            antoine.tabet@mail.utoronto.ca
+          </span>
+          <ArrowUpRight className="w-6 h-6 md:w-9 md:h-9 text-violet-400 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300" />
+        </a>
+      </AnimatedSection>
 
-      {/* Divider + footer row */}
-      <div className="border-t border-zinc-800">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
-          <span>© 2026 Antoine Tabet</span>
+      {/* Meta row */}
+      <div className="relative z-10 border-t border-zinc-900">
+        <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <span className="font-mono text-zinc-600 text-xs uppercase tracking-[0.14em]">
+            © {new Date().getFullYear()} Antoine Tabet
+          </span>
 
           <div className="flex items-center gap-5">
             <a
@@ -52,7 +54,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded"
+              className="text-zinc-500 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded"
             >
               <Github className="w-5 h-5" />
             </a>
@@ -61,7 +63,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded"
+              className="text-zinc-500 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded"
             >
               <Linkedin className="w-5 h-5" />
             </a>
@@ -70,13 +72,16 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded"
+              className="text-zinc-500 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded"
             >
               <Instagram className="w-5 h-5" />
             </a>
           </div>
 
-          <span>Built with Next.js &amp; Tailwind</span>
+          <span className="font-mono text-zinc-600 text-xs uppercase tracking-[0.14em]">
+            Toronto, Canada
+            <LocalTime />
+          </span>
         </div>
       </div>
     </footer>

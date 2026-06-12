@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Code2, Blocks, Brain, Wrench } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import AnimatedSection from "@/components/AnimatedSection";
 
 export const metadata: Metadata = {
   title: "Stack | Antoine Tabet",
@@ -14,10 +15,8 @@ export const metadata: Metadata = {
 
 const categories = [
   {
+    index: "01",
     name: "Languages",
-    Icon: Code2,
-    iconColor: "text-violet-600",
-    iconBg: "bg-violet-100",
     skills: [
       { name: "TypeScript", projects: ["WorldEd", "WealthEasy", "N3XU$"] },
       { name: "Python", projects: ["FastAPI backends"] },
@@ -27,10 +26,8 @@ const categories = [
     ],
   },
   {
+    index: "02",
     name: "Frameworks & Libraries",
-    Icon: Blocks,
-    iconColor: "text-blue-600",
-    iconBg: "bg-blue-100",
     skills: [
       { name: "Next.js", projects: ["WorldEd", "WealthEasy", "N3XU$"] },
       { name: "React", projects: ["All frontend projects"] },
@@ -41,10 +38,8 @@ const categories = [
     ],
   },
   {
+    index: "03",
     name: "AI / ML",
-    Icon: Brain,
-    iconColor: "text-violet-600",
-    iconBg: "bg-violet-100",
     skills: [
       { name: "Claude API", projects: ["WealthEasy"] },
       { name: "Gemini API", projects: ["WorldEd", "N3XU$"] },
@@ -54,10 +49,8 @@ const categories = [
     ],
   },
   {
+    index: "04",
     name: "Tools & Infrastructure",
-    Icon: Wrench,
-    iconColor: "text-zinc-600",
-    iconBg: "bg-zinc-100",
     skills: [
       { name: "PostgreSQL", projects: ["WorldEd", "WealthEasy", "N3XU$"] },
       { name: "Supabase", projects: ["WorldEd", "WealthEasy", "N3XU$", "Aspire"] },
@@ -72,64 +65,60 @@ const categories = [
 
 export default function StackPage() {
   return (
-    <div className="min-h-screen">
-      {/* ═══════════════════════════════════════════
-          HERO
-      ═══════════════════════════════════════════ */}
-      <section className="bg-zinc-950 py-20">
-        <div className="max-w-5xl mx-auto px-6">
-          <p className="text-violet-400 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
-            — Skills
+    <div className="min-h-screen bg-[#0a0a0a]">
+      {/* ── HERO ── */}
+      <section className="bg-zinc-950 pt-16 pb-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="font-mono text-violet-400 text-xs uppercase tracking-[0.3em] mb-6">
+            Skills
           </p>
-          <h1 className="text-white text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-4">
+          <h1 className="text-white font-bold tracking-tighter leading-[0.95] text-[clamp(3rem,10vw,8rem)] mb-8">
             My Stack
           </h1>
           <p className="text-zinc-400 text-xl max-w-2xl leading-relaxed">
-            Languages, frameworks, and tools I reach for when building scalable software
-            and intelligent systems — with the projects where I used them.
+            Languages, frameworks, and tools I reach for when building scalable software and
+            intelligent systems — with the projects where I used them.
           </p>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          GRID
-      ═══════════════════════════════════════════ */}
-      <section className="bg-white py-16">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {categories.map(({ name, Icon, iconColor, iconBg, skills }) => (
-              <div key={name}>
-                <div className="flex items-center gap-3 mb-6 pb-4 border-b border-zinc-200">
-                  <div className={`w-9 h-9 rounded-lg ${iconBg} flex items-center justify-center`}>
-                    <Icon className={`w-5 h-5 ${iconColor}`} />
-                  </div>
-                  <h2 className="text-zinc-900 text-xl font-bold">{name}</h2>
-                </div>
-                <div className="space-y-3">
+      {/* ── CATEGORIES ── */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20">
+            {categories.map(({ index, name, skills }) => (
+              <AnimatedSection key={name}>
+                <h2 className="font-mono text-violet-400 text-xs uppercase tracking-[0.3em] mb-2">
+                  {index} / {name}
+                </h2>
+                <div>
                   {skills.map((skill) => (
                     <div
                       key={skill.name}
-                      className="group p-3 rounded-xl border border-zinc-100 hover:border-violet-200 hover:bg-violet-50/50 transition-colors duration-200"
+                      className="group border-t border-zinc-800 first:border-t-0 py-4 flex items-baseline justify-between gap-6"
                     >
-                      <p className="text-zinc-900 font-semibold text-sm">{skill.name}</p>
-                      <p className="text-zinc-400 text-xs mt-0.5">
+                      <p className="text-white font-semibold tracking-tight group-hover:text-violet-300 transition-colors">
+                        {skill.name}
+                      </p>
+                      <p className="font-mono text-zinc-600 text-xs uppercase tracking-[0.1em] text-right">
                         {skill.projects.join(" · ")}
                       </p>
                     </div>
                   ))}
                 </div>
-              </div>
+              </AnimatedSection>
             ))}
           </div>
 
-          <div className="mt-12 pt-8 border-t border-zinc-200 text-center">
+          <AnimatedSection className="mt-20 pt-10 border-t border-zinc-900">
             <Link
               href="/projects"
-              className="inline-flex items-center gap-1.5 text-violet-600 hover:text-violet-500 font-medium transition-colors text-sm cursor-pointer"
+              className="group inline-flex items-center gap-2 font-mono text-sm uppercase tracking-[0.18em] text-zinc-400 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded-sm"
             >
-              See these in action →
+              See These in Action
+              <ArrowUpRight className="w-4 h-4 text-violet-400 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
             </Link>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
     </div>

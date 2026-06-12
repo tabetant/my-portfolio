@@ -20,7 +20,7 @@ export default function YouTubePlayer({
   return (
     <div
       className={cn(
-        "relative w-full aspect-video rounded-xl overflow-hidden border border-zinc-200 bg-zinc-100 shadow-2xl",
+        "relative w-full aspect-video rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl",
         className
       )}
     >
