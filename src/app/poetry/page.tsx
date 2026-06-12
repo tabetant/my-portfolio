@@ -45,10 +45,8 @@ Porque ya no soy capaz de recordar los besos.`,
   },
 };
 
-const INSTAGRAM_HREF =
-  "https://www.instagram.com/heartstringsunplayed?igsh=MTU3ZXNtMGFiMGRpbQ%3D%3D&utm_source=qr";
-const TIKTOK_HREF =
-  "https://www.tiktok.com/@heartstringsunplayed?_r=1&_t=ZS-94MZf8zKp5W";
+const INSTAGRAM_HREF = "https://www.instagram.com/antoinepoetry";
+const TIKTOK_HREF = "https://www.tiktok.com/@antoinepoetry";
 
 const TikTokIcon = () => (
   <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
