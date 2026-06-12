@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Antoine Tabet | AI Engineer & Founder",
     description:
-      "ECE @ University of Toronto. Dean's List. 3.83 cumulative GPA. I build AI systems that ship to production.",
+      "ECE @ University of Toronto. Dean's List. 3.84 cumulative GPA. I build AI systems that ship to production.",
     url: "https://antoinetabet.com",
     siteName: "Antoine Tabet",
     locale: "en_US",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Antoine Tabet | AI Engineer & Founder",
     description:
-      "ECE @ University of Toronto. Dean's List. 3.83 cumulative GPA. I build AI systems that ship to production.",
+      "ECE @ University of Toronto. Dean's List. 3.84 cumulative GPA. I build AI systems that ship to production.",
   },
   metadataBase: new URL("https://antoinetabet.com"),
 };

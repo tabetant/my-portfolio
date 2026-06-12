@@ -9,7 +9,7 @@ import WorkRow from "@/components/WorkRow";
 // ─── Data ────────────────────────────────────────────────────────────────────
 
 const stats = [
-  { num: "3.83", label: "Cumulative GPA" },
+  { num: "3.84", label: "Cumulative GPA" },
   { num: "35%", label: "Latency Reduced @ Aspire" },
   { num: "19", label: "Courses in Production" },
   { num: "8 yrs", label: "Leadership (Scouts du Liban)" },

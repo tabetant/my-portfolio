@@ -138,15 +138,15 @@ export default function AboutPage() {
                       Cumulative GPA
                     </p>
                     <p className="text-white font-bold text-2xl tracking-tight">
-                      3.83 <span className="text-zinc-500 text-sm font-normal">/ 4.0</span>
+                      3.84 <span className="text-zinc-500 text-sm font-normal">/ 4.0</span>
                     </p>
                   </div>
                   <div className="bg-[#0a0a0a] p-5">
                     <p className="font-mono text-zinc-500 text-[11px] uppercase tracking-[0.14em] mb-2">
-                      Fall 2025 Sessional
+                      2025–26 Annual GPA
                     </p>
                     <p className="text-white font-bold text-2xl tracking-tight">
-                      3.94 <span className="text-zinc-500 text-sm font-normal">/ 4.0</span>
+                      3.91 <span className="text-zinc-500 text-sm font-normal">/ 4.0</span>
                     </p>
                   </div>
                   <div className="bg-[#0a0a0a] p-5">
