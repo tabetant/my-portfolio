@@ -28,15 +28,20 @@ export default function WorldEdPage() {
       overview={
         <>
           <p>
-            A full-stack educational platform that transforms STEM learning through intelligent
-            course delivery, real-time progress tracking, and an AI learning assistant.
+            WorldEd is the platform I founded and run: a full-stack STEM learning system with
+            LaTeX-rendered content, embedded video lectures, interactive quizzes, and a
+            gamified streak system — built on Next.js 15, TypeScript, PostgreSQL, and
+            Drizzle ORM.
           </p>
           <p>
-            Built to tackle a problem I care about: making quality STEM education more
-            accessible and engaging. WorldEd is a complete learning management system with
-            LaTeX-rendered content, embedded video lectures, interactive quizzes, and a
-            gamified streak system. RSCs cut client-side JS by 40%, while optimised DB indexes
-            reduce API traffic by roughly 70%.
+            The headline engineering wins are measurable: React Server Components cut
+            client-side JavaScript by 40%, optimised composite indexes cut query latency by
+            40%, and database-level aggregation reduced API traffic by roughly 70%.
+          </p>
+          <p>
+            At its core is Eddi, a Socratic AI tutor powered by a RAG pipeline over pgvector
+            with Google Gemini function calling — students ask in natural language and Eddi
+            guides them through the material instead of handing over answers.
           </p>
         </>
       }
@@ -44,8 +49,8 @@ export default function WorldEdPage() {
       videoTitle="WorldEd Demo"
       features={[
         {
-          title: "Eddi — AI Learning Assistant",
-          desc: "Powered by Gemini 1.5 Flash with function calling. Users query in natural language and Eddi navigates them using fuzzy search in a closed-loop agent workflow.",
+          title: "Eddi — Socratic AI Tutor",
+          desc: "RAG pipeline over pgvector with Gemini function calling. Students query in natural language and Eddi navigates them through course material in a closed-loop agent workflow.",
         },
         {
           title: "Dynamic Progress & Streaks",

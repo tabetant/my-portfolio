@@ -20,10 +20,10 @@ export default function ClickAMolePage() {
       tags={["C/C++", "Arduino Mega 2560", "Embedded Systems", "Mechatronics"]}
       github="https://github.com/AG2048/click-a-mole"
       stats={[
+        { num: "60 FPS", label: "Deterministic Frame-Step" },
+        { num: "4", label: "FSM Game States" },
         { num: "9", label: "Mole Modules" },
-        { num: "C/C++", label: "Language" },
-        { num: "Arduino Mega", label: "Platform" },
-        { num: "Real-Time FSM", label: "Architecture" },
+        { num: "25+", label: "Pages of Architecture Docs" },
       ]}
       overview={
         <>
@@ -40,7 +40,7 @@ export default function ClickAMolePage() {
       features={[
         {
           title: "Real-Time FSM Engine",
-          desc: "C++ backend managing complex finite state machines that securely handle the full active moles lifecycle.",
+          desc: "C++ engine built on a 4-state finite-state machine with custom memory management, running a deterministic frame-step simulation at 60 FPS.",
         },
         {
           title: "Hardware-Software Co-Design",
@@ -52,7 +52,11 @@ export default function ClickAMolePage() {
         },
         {
           title: "Non-Blocking I/O",
-          desc: "Custom routines to poll serial and hardware concurrently without stuttering game logic.",
+          desc: "Event-driven input handling and collision detection polled concurrently with hardware, without stuttering game logic.",
+        },
+        {
+          title: "Engineering Discipline",
+          desc: "OOP patterns (inheritance, polymorphism) cut development time ~20%, documented across 25+ pages of architecture docs.",
         },
       ]}
       techStack={["C / C++", "Arduino Mega 2560", "Embedded Systems", "Mechatronics", "Finite State Machine"]}

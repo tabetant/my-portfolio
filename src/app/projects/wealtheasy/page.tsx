@@ -20,22 +20,28 @@ export default function WealthEasyPage() {
       tags={["Next.js 14", "TypeScript", "Node.js", "PostgreSQL", "Claude API"]}
       github="https://github.com/mohamadmsalman82/WealthSimple-AIBuilderProject"
       stats={[
+        { num: "10×", label: "Advisor Output vs Manual Review" },
+        { num: "3 days", label: "End-to-End Build (Team of 2)" },
         { num: "12", label: "REST API Routes" },
         { num: "2", label: "Human Checkpoints" },
-        { num: "Claude API", label: "AI Engine" },
-        { num: "PostgreSQL", label: "Database" },
       ]}
       overview={
         <>
           <p>
-            Built an end-to-end AI system that monitors client bank transactions, detects life
-            events (new baby, inheritance, home purchase, marriage, etc.), and automatically
-            generates personalised financial planning briefs using the Anthropic Claude API.
+            WealthEasy scales a financial advisor&apos;s output roughly 10× over manual
+            review: an end-to-end AI system that monitors client bank transactions, detects
+            life events (new baby, inheritance, home purchase, marriage), and automatically
+            drafts personalised financial planning briefs with the Anthropic Claude API.
           </p>
           <p>
-            Every brief is routed through a mandatory human advisor review portal before
-            delivery — a two-checkpoint human-in-the-loop architecture designed strictly to
-            meet Canadian securities regulations.
+            Compliance was the hard constraint, not an afterthought. Every brief routes
+            through a mandatory advisor review portal backed by a compliance audit log — a
+            two-checkpoint human-in-the-loop architecture designed strictly around Canadian
+            securities regulations, with Supabase row-level security underneath.
+          </p>
+          <p>
+            The full system — 12-route REST API, transaction signal monitor, review portal,
+            and audit log — was delivered end-to-end in three days by a team of two.
           </p>
         </>
       }
@@ -52,7 +58,11 @@ export default function WealthEasyPage() {
         },
         {
           title: "Full-Stack Implementation",
-          desc: "12-route REST API in Express alongside a Next.js 14 client shell, data managed with Supabase PostgreSQL.",
+          desc: "12-route REST API in Express alongside a Next.js 14 client shell, data managed with Supabase PostgreSQL and row-level security.",
+        },
+        {
+          title: "Shipped Under Pressure",
+          desc: "Complete end-to-end system — API, signal monitor, review portal, compliance audit log — built in 3 days as a team of 2, scaling advisor output 10× over manual review.",
         },
       ]}
       techStack={["Next.js 14", "TypeScript", "Node.js", "PostgreSQL", "Claude API", "Supabase"]}

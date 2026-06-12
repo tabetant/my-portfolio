@@ -22,8 +22,8 @@ export default function AspirePage() {
       stats={[
         { num: "35%", label: "Latency Reduced" },
         { num: "5", label: "Apps Built" },
+        { num: "95%", label: "Unit Test Coverage" },
         { num: "1,000+", label: "Requests / Day" },
-        { num: "Production", label: "Deployment" },
       ]}
       overview={
         <>
@@ -33,9 +33,10 @@ export default function AspirePage() {
             queries and heavy client-side rendering.
           </p>
           <p>
-            Additionally, the team needed rapid prototyping of internal tools to streamline
-            operations, requiring versatile full-stack engineering skills across the complete
-            product lifecycle.
+            Over the internship I shipped 5 production full-stack applications delivering 10+
+            features, profiled and optimised 15+ backend queries to cut average response
+            latency by 35%, and hardened security with row-level security and JWT auth
+            middleware — at 95% unit test coverage.
           </p>
         </>
       }
@@ -48,6 +49,10 @@ export default function AspirePage() {
         {
           title: "Internal Tooling",
           desc: "Architected and deployed 5 internal full-stack applications that automated manual data entry workflows and provided real-time analytics dashboards for the operations team.",
+        },
+        {
+          title: "Security & Reliability",
+          desc: "Hardened the platform with Postgres row-level security and JWT auth middleware, with normalized schemas serving 1,000+ daily requests at 95% unit test coverage.",
         },
       ]}
       techStack={["Next.js (React)", "TypeScript", "Supabase (PostgreSQL)", "Tailwind CSS"]}

@@ -37,6 +37,11 @@ export default function NexusPage() {
             translates complex syllabi and grades into a &ldquo;Resonance&rdquo; metric,
             ensuring students stay in-phase with their long-term goals.
           </p>
+          <p>
+            Under the hood: a multi-modal PDF-to-JSON &ldquo;Neural Audit&rdquo; engine on
+            Gemini 2.0 Flash, a Supabase SSR identity vault managed with Drizzle ORM, and a
+            real-time Recharts performance dashboard over a FastAPI backend.
+          </p>
         </>
       }
       videoId="S2v6a2zS6o8"

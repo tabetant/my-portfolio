@@ -67,7 +67,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 border-t border-zinc-800 pt-8">
               <div className="md:col-span-4">
                 <p className="font-mono text-zinc-500 text-xs uppercase tracking-[0.18em] mb-2">
-                  May 2024 — Aug 2024
+                  May 2025 — Aug 2025
                 </p>
                 <p className="font-mono text-zinc-600 text-xs uppercase tracking-[0.18em]">
                   Aspire · Beirut, Lebanon
@@ -90,8 +90,13 @@ export default function AboutPage() {
                   </li>
                   <li className="flex gap-4">
                     <span className="text-violet-400 font-mono text-sm shrink-0 pt-0.5">→</span>
-                    Collaborated in an agile team environment to push features from development
-                    to production.
+                    Shipped 5 production full-stack applications (Next.js + Supabase)
+                    delivering 10+ features, with RESTful APIs serving 1,000+ daily requests.
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="text-violet-400 font-mono text-sm shrink-0 pt-0.5">→</span>
+                    Hardened security with row-level security and JWT auth middleware, at 95%
+                    unit test coverage.
                   </li>
                 </ul>
               </div>
@@ -113,7 +118,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 border-t border-zinc-800 pt-8">
               <div className="md:col-span-4">
                 <p className="font-mono text-zinc-500 text-xs uppercase tracking-[0.18em] mb-2">
-                  Sep 2023 — Expected 2027
+                  Aug 2024 — May 2029
                 </p>
                 <p className="font-mono text-zinc-600 text-xs uppercase tracking-[0.18em]">
                   University of Toronto · Toronto, ON
@@ -121,7 +126,10 @@ export default function AboutPage() {
               </div>
               <div className="md:col-span-8">
                 <h2 className="text-white text-2xl md:text-3xl font-bold tracking-tight mb-6">
-                  BASc, Computer Engineering
+                  BASc, Electrical &amp; Computer Engineering
+                  <span className="block text-zinc-400 text-lg font-medium mt-1">
+                    Minor in Business &amp; AI
+                  </span>
                 </h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-zinc-800 border border-zinc-800 rounded-xl overflow-hidden mb-6">
@@ -152,9 +160,9 @@ export default function AboutPage() {
                 </div>
 
                 <p className="text-zinc-400 leading-relaxed">
-                  Focusing on AI, Software Systems, and Distributed Computing. Coursework
-                  includes Data Structures &amp; Algorithms, Digital Systems, Operating
-                  Systems, and Advanced Software Engineering.
+                  Dean&apos;s List 2024–2025 and Fall 2025. Coursework includes Machine
+                  Learning, Data Structures &amp; Algorithms, Software Engineering, Digital
+                  Systems, and Object-Oriented Programming.
                 </p>
               </div>
             </div>
@@ -175,7 +183,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 border-t border-zinc-800 pt-8 pb-12">
               <div className="md:col-span-4">
                 <p className="font-mono text-zinc-500 text-xs uppercase tracking-[0.18em] mb-2">
-                  Jan 2024
+                  Jan 2023 · Diplomatic Commendation
                 </p>
                 <p className="font-mono text-zinc-600 text-xs uppercase tracking-[0.18em]">
                   Harvard Model United Nations
@@ -186,8 +194,9 @@ export default function AboutPage() {
                   Advisor &amp; Delegate
                 </h2>
                 <p className="text-zinc-400 leading-relaxed">
-                  Honed diplomacy, strategy, and negotiation skills on an international stage,
-                  representing complex geopolitical stances and drafting joint resolutions.
+                  Earned a Diplomatic Commendation representing Denmark among 300+
+                  international delegates — co-authored and passed 3 resolutions through
+                  structured negotiation and written advocacy.
                 </p>
               </div>
               <div className="md:col-span-3">
@@ -219,9 +228,10 @@ export default function AboutPage() {
                   Camp Counselor &amp; Leader
                 </h2>
                 <p className="text-zinc-400 leading-relaxed">
-                  Dedicated 8 years to leading teams of young scouts, organizing camps,
-                  managing complex logistics, and developing communication and leadership
-                  skills in high-pressure outdoor environments.
+                  Elected troop leader for 9 scouts — led meetings, organized camps, and
+                  trained youth on outdoor technical skills across 8 years, logging 80+ hours
+                  of community service through food drives, beach clean-ups, and youth
+                  education programs.
                 </p>
               </div>
               <div className="md:col-span-3">
