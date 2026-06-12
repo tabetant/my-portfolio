@@ -4,6 +4,8 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
+import CursorDot from "@/components/CursorDot";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -44,7 +46,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body
         suppressHydrationWarning
         className={cn(
@@ -53,8 +55,14 @@ export default function RootLayout({
           jetbrainsMono.variable
         )}
       >
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
+        <div className="grain" aria-hidden="true" />
+        <SmoothScroll />
+        <CursorDot />
         <Navbar />
-        <main className="pt-16">{children}</main>
+        <main id="main" className="pt-16">{children}</main>
         <Analytics />
       </body>
     </html>
