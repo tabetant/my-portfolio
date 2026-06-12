@@ -132,7 +132,7 @@ export default function ContactPage() {
                   </p>
                   <p className="text-zinc-400 text-sm leading-relaxed mb-6 max-w-sm">
                     Computer Engineering at the University of Toronto. Dean&apos;s List Scholar
-                    (3.83 GPA). Building AI systems that solve real problems.
+                    (3.84 GPA). Building AI systems that solve real problems.
                   </p>
                   <a
                     href="/Antoine_Resume.pdf"
