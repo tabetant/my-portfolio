@@ -7,6 +7,32 @@ import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import CursorDot from "@/components/CursorDot";
 import SmoothScroll from "@/components/SmoothScroll";
+import ConsoleGreeting from "@/components/ConsoleGreeting";
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Antoine Tabet",
+  url: "https://antoinetabet.vercel.app",
+  email: "mailto:antoine.tabet@mail.utoronto.ca",
+  jobTitle: "Computer Engineering Student & AI Engineer",
+  affiliation: {
+    "@type": "CollegeOrUniversity",
+    name: "University of Toronto",
+  },
+  sameAs: [
+    "https://github.com/tabetant",
+    "https://linkedin.com/in/antoinetabetuoft",
+  ],
+  knowsAbout: [
+    "Artificial Intelligence",
+    "Retrieval-Augmented Generation",
+    "Software Engineering",
+    "Python",
+    "TypeScript",
+    "PostgreSQL",
+  ],
+};
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -60,9 +86,14 @@ export default function RootLayout({
         <a href="#main" className="skip-link">
           Skip to content
         </a>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <div className="grain" aria-hidden="true" />
         <SmoothScroll />
         <CursorDot />
+        <ConsoleGreeting />
         <Navbar />
         <main id="main" className="pt-16">{children}</main>
         <Analytics />

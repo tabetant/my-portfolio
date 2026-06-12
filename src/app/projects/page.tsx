@@ -1,5 +1,16 @@
+import type { Metadata } from "next";
 import { Link } from "next-view-transitions";
 import AnimatedSection from "@/components/AnimatedSection";
+
+export const metadata: Metadata = {
+  title: "Work | Antoine Tabet",
+  description: "All projects: production AI systems, full-stack apps, and hardware builds — including AskAlan, a RAG assistant serving 19 University of Toronto courses.",
+  openGraph: {
+    title: "Work | Antoine Tabet",
+    description: "Production AI systems, full-stack apps, and hardware builds.",
+    url: "https://antoinetabet.vercel.app/projects",
+  },
+};
 import Footer from "@/components/Footer";
 import WorkRow from "@/components/WorkRow";
 

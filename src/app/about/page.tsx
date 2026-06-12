@@ -1,5 +1,16 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import AnimatedSection from "@/components/AnimatedSection";
+
+export const metadata: Metadata = {
+  title: "About | Antoine Tabet",
+  description: "The story behind the work: Computer Engineering at the University of Toronto, Dean's List, eight years of scout leadership, and engineering shaped by Beirut and Toronto.",
+  openGraph: {
+    title: "About | Antoine Tabet",
+    description: "Computer Engineering at UofT, Dean's List, and eight years of leadership.",
+    url: "https://antoinetabet.vercel.app/about",
+  },
+};
 
 const photos = [
   { src: "/images/about-me/me_playing_guitar.jpeg", caption: "Guitar" },

@@ -100,8 +100,15 @@ export default function HomePage() {
                 </span>
               </h1>
               <div className="hero-subtitle mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
-                <p className="font-mono text-zinc-400 text-sm uppercase tracking-[0.18em]">
-                  Dean&apos;s List · AI &amp; Software Engineering
+                <p className="inline-flex items-center gap-3 font-mono text-zinc-400 text-sm uppercase tracking-[0.18em]">
+                  <span className="relative flex h-2 w-2" aria-hidden="true">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                  </span>
+                  <span>
+                    <span className="text-emerald-400">Open to Summer 2026</span> · Dean&apos;s
+                    List · AI &amp; Software
+                  </span>
                 </p>
                 <span className="hidden md:block h-px w-24 bg-zinc-700" aria-hidden="true" />
                 <a
