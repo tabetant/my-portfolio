@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import AnimatedSection from "@/components/AnimatedSection";
 import Footer from "@/components/Footer";
 import WorkRow from "@/components/WorkRow";

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
+import { ViewTransitions } from "next-view-transitions";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import CursorDot from "@/components/CursorDot";
@@ -46,6 +47,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
+    <ViewTransitions>
     <html lang="en" suppressHydrationWarning>
       <body
         suppressHydrationWarning
@@ -66,5 +68,6 @@ export default function RootLayout({
         <Analytics />
       </body>
     </html>
+    </ViewTransitions>
   );
 }

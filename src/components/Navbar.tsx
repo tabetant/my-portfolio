@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowUpRight } from "lucide-react";
@@ -40,7 +40,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`site-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled && !menuOpen
           ? "bg-black/80 backdrop-blur-md border-b border-white/5"
           : "bg-transparent"

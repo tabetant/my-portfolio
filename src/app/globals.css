@@ -173,16 +173,32 @@ html {
   top: 1rem;
 }
 
-/* Page-enter transition (template.tsx remounts per navigation).
-   No fill-mode: the transform must clear when finished, or this wrapper
-   stays a containing block and breaks position: fixed descendants
-   (e.g. the reading-progress bar). */
-.page-enter {
-  animation: pageEnter 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+/* ─── View Transitions (next-view-transitions → document.startViewTransition)
+   Old page lifts away, new page rises in. The navbar gets its own
+   view-transition-name so it stays fixed while pages swap beneath it.
+   Browsers without the API (Firefox) fall back to instant navigation. */
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root) {
+    animation: vt-out 0.25s ease both;
+  }
+  ::view-transition-new(root) {
+    animation: vt-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
 }
-@keyframes pageEnter {
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+@keyframes vt-out {
+  to { opacity: 0; transform: translateY(-10px); }
+}
+@keyframes vt-in {
   from { opacity: 0; transform: translateY(14px); }
-  to   { opacity: 1; transform: translateY(0); }
+}
+.site-nav {
+  view-transition-name: site-nav;
 }
 
 /* Reading progress bar (case studies) — scroll-driven, zero JS */
@@ -305,7 +321,6 @@ html.lenis body {
     animation: none;
   }
   .hero-parallax,
-  .page-enter,
   .hero-line {
     animation: none;
   }

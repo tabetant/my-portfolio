@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Instagram } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { cn } from "@/lib/utils";
 
 type Language = "EN" | "FR" | "ES";

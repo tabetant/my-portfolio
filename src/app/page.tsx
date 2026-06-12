@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { ArrowUpRight, ArrowDown } from "lucide-react";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
