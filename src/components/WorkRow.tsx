@@ -18,6 +18,9 @@ export interface WorkRowProps {
   headingLevel?: "h2" | "h3";
 }
 
+const ROW_CLASS =
+  "project-row group relative block border-t border-zinc-800 last:border-b focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-inset focus-visible:bg-violet-600/5";
+
 export default function WorkRow({
   index,
   title,
@@ -30,6 +33,8 @@ export default function WorkRow({
 }: WorkRowProps) {
   const rowRef = useRef<HTMLAnchorElement>(null);
   const Heading = headingLevel;
+  // Entries without a case study page link straight out to their repo
+  const isExternal = /^https?:\/\//.test(href);
 
   const handleMove = (e: React.PointerEvent<HTMLAnchorElement>) => {
     if (e.pointerType !== "mouse") return;
@@ -41,13 +46,8 @@ export default function WorkRow({
     el.style.setProperty("--preview-x", `${x}px`);
   };
 
-  return (
-    <Link
-      ref={rowRef}
-      href={href}
-      onPointerMove={handleMove}
-      className="project-row group relative block border-t border-zinc-800 last:border-b focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-inset focus-visible:bg-violet-600/5"
-    >
+  const body = (
+    <>
       {/* Cursor-following gradient preview (desktop hover only) */}
       <div
         className={`row-preview hidden md:block bg-gradient-to-br ${gradient}`}
@@ -88,6 +88,27 @@ export default function WorkRow({
         </div>
         <ArrowUpRight className="hidden md:block w-7 h-7 text-zinc-700 group-hover:text-violet-400 group-hover:-translate-y-1 group-hover:translate-x-1 transition-all duration-300 shrink-0" />
       </div>
+    </>
+  );
+
+  if (isExternal) {
+    return (
+      <a
+        ref={rowRef}
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        onPointerMove={handleMove}
+        className={ROW_CLASS}
+      >
+        {body}
+      </a>
+    );
+  }
+
+  return (
+    <Link ref={rowRef} href={href} onPointerMove={handleMove} className={ROW_CLASS}>
+      {body}
     </Link>
   );
 }
