@@ -87,7 +87,7 @@ export default function AskAlanPage() {
         "Docker",
       ]}
       shareTitle="AskAlan — production AI teaching assistant by Antoine Tabet"
-      next={{ href: "/projects/wealtheasy", label: "WealthEasy" }}
+      next={{ href: "/projects/pokedex", label: "Multimodal Pokedex" }}
     />
   );
 }

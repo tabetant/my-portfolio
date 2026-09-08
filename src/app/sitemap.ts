@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/projects",
     "/projects/askalan",
+    "/projects/pokedex",
     "/projects/wealtheasy",
     "/projects/worlded",
     "/projects/nexus",
