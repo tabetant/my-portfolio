@@ -41,6 +41,8 @@ const categories = [
     index: "03",
     name: "AI / ML",
     skills: [
+      { name: "PyTorch", projects: ["Multimodal Pokedex"] },
+      { name: "scikit-learn", projects: ["Model evaluation"] },
       { name: "Claude API", projects: ["WealthEasy"] },
       { name: "Gemini API", projects: ["WorldEd", "N3XU$"] },
       { name: "RAG Pipelines", projects: ["WorldEd"] },

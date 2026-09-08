@@ -51,10 +51,10 @@ const projects = [
 ];
 
 const marqueeRow1 = [
-  "Python", "TypeScript", "Next.js", "FastAPI", "Claude API", "PostgreSQL",
+  "Python", "TypeScript", "PyTorch", "Next.js", "FastAPI", "Claude API",
 ];
 const marqueeRow2 = [
-  "Docker", "React", "Node.js", "LangChain", "C / C++", "Vercel",
+  "PostgreSQL", "Docker", "React", "Node.js", "C / C++", "Vercel",
 ];
 
 const photos = [
@@ -311,8 +311,8 @@ export default function HomePage() {
           </div>
         </div>
         <p className="sr-only">
-          Python, TypeScript, Next.js, FastAPI, Claude API, PostgreSQL, Docker, React,
-          Node.js, LangChain, C/C++, Vercel
+          Python, TypeScript, PyTorch, Next.js, FastAPI, Claude API, PostgreSQL, Docker,
+          React, Node.js, C/C++, Vercel
         </p>
       </section>
 
