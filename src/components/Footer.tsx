@@ -28,7 +28,7 @@ export default function Footer() {
           </span>
         </h2>
         <p className="font-mono text-zinc-500 text-sm uppercase tracking-[0.18em] mb-12">
-          Open to internships · New grad roles · Research
+          Open to internships · PEY co-op · Research
         </p>
         <a
           href="mailto:antoine.tabet@mail.utoronto.ca"

@@ -106,8 +106,17 @@ export default function HomePage() {
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
                   </span>
                   <span>
-                    <span className="text-emerald-400">Open to Summer 2026</span> · Dean&apos;s
-                    List · AI &amp; Software
+                    <span className="text-emerald-400">
+                      Open to{" "}
+                      <abbr
+                        title="Professional Experience Year, the University of Toronto's 12 to 16 month co-op"
+                        className="no-underline"
+                      >
+                        PEY
+                      </abbr>{" "}
+                      and Summer 2027 internships
+                    </span>{" "}
+                    · Dean&apos;s List · AI &amp; Software
                   </span>
                 </p>
                 <span className="hidden md:block h-px w-24 bg-zinc-700" aria-hidden="true" />

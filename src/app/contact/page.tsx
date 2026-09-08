@@ -5,10 +5,10 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 export const metadata: Metadata = {
   title: "Contact | Antoine Tabet",
-  description: "Get in touch with Antoine Tabet — open to internships, new grad roles, and applied AI research.",
+  description: "Get in touch with Antoine Tabet. Open to internships, PEY co-op placements, and applied AI research.",
   openGraph: {
     title: "Contact | Antoine Tabet",
-    description: "Get in touch — open to internships, new grad roles, and applied AI research.",
+    description: "Get in touch. Open to internships, PEY co-op placements, and applied AI research.",
     url: "https://antoinetabet.com/contact",
   },
 };
@@ -33,7 +33,7 @@ const contacts = [
 
 const opportunities = [
   "Software Engineering Internships",
-  "New Grad Full-Time Roles",
+  "PEY Co-op Placements",
   "Applied AI / ML Research",
   "Open Source Collaboration",
 ];
@@ -51,8 +51,9 @@ export default function ContactPage() {
             Let&apos;s Talk.
           </h1>
           <p className="text-zinc-400 text-xl max-w-2xl leading-relaxed mb-8">
-            Open to internships, new grad roles, and applied AI research. Based in Toronto —
-            happy to connect remotely or in person.
+            Open to summer internships and PEY, the University of Toronto&apos;s 12 to 16
+            month co-op, plus applied AI research. Based in Toronto and happy to connect
+            remotely or in person.
           </p>
           <div className="flex items-center gap-3">
             <span className="relative flex h-2.5 w-2.5">
@@ -61,7 +62,7 @@ export default function ContactPage() {
             </span>
             <span className="font-mono text-zinc-500 text-xs uppercase tracking-[0.18em]">
               Available for{" "}
-              <span className="text-emerald-400">Summer 2026 opportunities</span>
+              <span className="text-emerald-400">PEY and Summer 2027 internships</span>
             </span>
           </div>
         </div>
