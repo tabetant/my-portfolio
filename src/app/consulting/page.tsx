@@ -22,13 +22,7 @@ const engagements = [
     index: "01",
     title: "Renovation contractor serving nonprofit housing operators",
     badge: "Paid engagement · Toronto",
-    desc: "Cleaned up financial records in QuickBooks and built reporting clarity for the owner. Currently building a voice to estimate system: field staff record a voice memo at the unit, and the system drafts the estimate in QuickBooks and creates the task card for the right crew. Trained the owners and office staff to run AI workflows themselves.",
-  },
-  {
-    index: "02",
-    title: "Alarm monitoring company",
-    badge: "Ongoing advisory · Ontario",
-    desc: "A company with 45+ years in business and 20,000+ customers. An ongoing advisory engagement on where AI fits their operations, from customer communications to internal process mapping.",
+    desc: "Cleaned up financial records in QuickBooks and built reporting clarity for the owner. The voice to estimate system is now live in production: field staff record a voice memo at the unit, the system drafts the estimate in QuickBooks and creates the task card for the right crew, and I engineered its AI cost to under 30 cents per estimate. Trained the owners and office staff to run AI workflows themselves.",
   },
 ];
 
