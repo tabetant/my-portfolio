@@ -23,7 +23,7 @@ export default function AskAlanPage() {
         { num: "19", label: "Courses in Production" },
         { num: "118K", label: "Document Chunks Indexed" },
         { num: "~40%", label: "Retrieval Latency Reduced" },
-        { num: "8K+", label: "Real Queries Validated" },
+        { num: "8,029", label: "Real Queries Replayed" },
       ]}
       overview={
         <>
@@ -38,7 +38,7 @@ export default function AskAlanPage() {
             I led the consolidation of its retrieval stack onto Postgres. The first phase
             migrated the keyword-search layer off Elasticsearch behind a behavior-preserving
             adapter, mirroring roughly 118,000 document chunks across all 19 courses and
-            validating ranking parity against more than 8,000 real student queries before any
+            validating ranking parity against 8,029 replayed real student queries before any
             cutover. It cut keyword-search latency by about 40% and removed one of three
             separate datastores from the operational footprint, with dual-read/dual-write
             safety and instant rollback throughout.
@@ -60,7 +60,7 @@ export default function AskAlanPage() {
         },
         {
           title: "Validated at Production Scale",
-          desc: "Replayed 8,000+ real student queries through both engines to prove ranking parity before cutover, and cut keyword-search latency roughly 40%.",
+          desc: "Replayed 8,029 real student queries through both engines to prove ranking parity before cutover, and cut keyword search latency roughly 40%.",
         },
         {
           title: "Multimodal Retrieval",
